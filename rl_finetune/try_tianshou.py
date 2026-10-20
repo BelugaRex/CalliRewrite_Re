@@ -299,4 +299,10 @@ policy.eval()
 collector = Collector(policy, test_envs, exploration_noise=True)
 result = test_collector.collect(n_episode=1, render=1/30)
 
+# Close subprocess workers and video encoders before interpreter shutdown.
+train_envs.close()
+test_envs.close()
+env.close()
+writer.close()
+
 
