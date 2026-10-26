@@ -118,6 +118,65 @@ Then you can have an easy startup:
 
 ### 5. Visualization and robotic demonstration
 
+---
+
+## RoboFab Calligraphy Simulator (ISDN5240 Group Project)
+
+The `robofab_sim/` module adds an interactive Viser simulator with a Franka Panda
+arm, deformable brush, and Xuan paper canvas. It supports three input modes:
+
+| Mode | Flag | Input |
+|------|------|-------|
+| Stage 1/2 — built-in chars | _(none)_ | dropdown: yong / yi / ren / zhong / shan |
+| Stage 3 — KanjiVG | `--char 福` | any CJK character in KanjiVG database |
+| Stage 3 — CalliRewrite | `--npz path.npz` | seq_extract output `.npz` file |
+
+### Quick Start
+
+```bash
+# 1. Create Python 3.11 venv and install deps
+uv venv .venv --python 3.11
+uv pip install --python .venv/bin/python viser yourdfpy robot_descriptions Pillow numpy
+
+# 2. Download KanjiVG data (~30MB, one-time)
+bash robofab_sim/data/download_kanjivg.sh
+
+# 3. Run simulator (Stage 1/2 built-in chars)
+.venv/bin/python robofab_sim/calligraphy_sim.py
+
+# 4. Run with any CJK character (Stage 3 — KanjiVG)
+.venv/bin/python robofab_sim/calligraphy_sim.py --char 福
+
+# 5. Full pipeline: image → CalliRewrite → Viser (one command)
+bash infer.sh 福
+```
+
+Then open `http://localhost:8080` in a browser (Chrome/Firefox — VS Code's
+embedded browser does not support WebGL). Click **Replay Character** to write.
+
+### seq_extract Inference (optional, requires TensorFlow)
+
+```bash
+# Separate Python 3.8 + TF 2.10 environment for seq_extract
+uv venv seq_extract/.venv --python 3.8
+uv pip install --python seq_extract/.venv/bin/python \
+    "tensorflow==2.10.0" "opencv-python==4.9.0.80" \
+    "tensorflow-io-gcs-filesystem==0.34.0" \
+    pillow numpy scipy six matplotlib imageio scikit-image gizeh cairocffi
+
+# Download pretrained weights (244MB) → place in:
+#   seq_extract/outputs/snapshot/new_train_phase_1/
+#   seq_extract/outputs/snapshot/new_train_phase_2/
+# Google Drive: https://drive.google.com/file/d/1PUghb8WizEOYHYIAdBluwQMbTeRlBqF1/view
+
+# Run inference
+CUDA_VISIBLE_DEVICES=0 seq_extract/.venv/bin/python seq_extract/test.py \
+    --input seq_extract/sample_inputs/yong_dir --model new_train_phase_2
+
+# Feed result into Viser
+.venv/bin/python robofab_sim/calligraphy_sim.py \
+    --npz seq_extract/outputs/sampling/__new_train_phase_2/seq_data/yong_test.npz
+```
 
 ## Citation
 ```
