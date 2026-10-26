@@ -459,8 +459,8 @@ def main(extra_char: str | None = None, npz_path: str | None = None):
                 except Exception as e:
                     print(f"[KanjiVG] Warning: could not load '{key}': {e}")
 
-    # Stage 3: inject KanjiVG trajectory for --char argument
-    if extra_char and _kvg_parser is not None:
+    # Stage 3: inject KanjiVG trajectory for --char argument (skip if --npz already set extra_char)
+    if extra_char and _kvg_parser is not None and extra_char not in CALLIGRAPHY_TRAJECTORIES:
         try:
             traj = _kvg_parser.get_trajectory(extra_char)
             CALLIGRAPHY_TRAJECTORIES[extra_char] = traj
