@@ -5,6 +5,7 @@ seq_extract/sample_inputs/
 seq_extract/tools/*.npz
 seq_extract/tools/*.png
 seq_extract/tools/*.gif
+seq_extract/tools/*_sum/
 seq_extract/1a2b3c.png
 
 # rl_finetune venv and generated data
