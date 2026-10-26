@@ -1,1 +1,8 @@
 /data/CalliRewrite/seq_extract/outputs/
+
+# RoboFab: KanjiVG data file is large (~30MB), download via robofab_sim/data/download_kanjivg.sh
+robofab_sim/data/kanjivg.xml
+
+# Python cache
+__pycache__/
+*.pyc
