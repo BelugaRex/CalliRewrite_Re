@@ -36,6 +36,12 @@ try:
 except ImportError:
     _kvg_parser = None
 
+# Stage 3: seq_extract (CalliRewrite) .npz trajectory loading
+try:
+    from seq_extract_to_trajectory import load_seq_extract_trajectory
+except ImportError:
+    pass
+
 import viser
 import viser.transforms as tf
 
@@ -429,7 +435,19 @@ CALLIGRAPHY_TRAJECTORIES = {
 # ==============================================================================
 # 4. Main Viser Simulation Studio
 # ==============================================================================
-def main(extra_char: str | None = None):
+def main(extra_char: str | None = None, npz_path: str | None = None):
+    # Stage 3 (CalliRewrite): load trajectory from seq_extract .npz output
+    if npz_path:
+        try:
+            traj = load_seq_extract_trajectory(npz_path)
+            key = Path(npz_path).stem
+            CALLIGRAPHY_TRAJECTORIES[key] = traj
+            print(f"[seq_extract] Loaded '{key}' → {len(traj)} strokes")
+            extra_char = key
+        except Exception as e:
+            print(f"[seq_extract] Failed to load '{npz_path}': {e}")
+            npz_path = None
+
     # Stage 2: load built-in CJK chars (人/中/山) from KanjiVG so all 5 chars have full trajectories
     _STAGE2_CHARS = [("人", "ren"), ("中", "zhong"), ("山", "shan")]
     if _kvg_parser is not None:
@@ -820,6 +838,9 @@ def main(extra_char: str | None = None):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description="RoboFab Calligraphy Simulator")
     ap.add_argument("--char", default=None,
-                    help="Stage 3: any CJK character to write automatically, e.g. --char 福")
+                    help="Stage 3 (KanjiVG): any CJK character, e.g. --char 福")
+    ap.add_argument("--npz", default=None,
+                    help="Stage 3 (CalliRewrite): path to seq_extract output .npz file")
     args = ap.parse_args()
+    main(extra_char=args.char, npz_path=args.npz)
     main(extra_char=args.char)
