@@ -430,6 +430,17 @@ CALLIGRAPHY_TRAJECTORIES = {
 # 4. Main Viser Simulation Studio
 # ==============================================================================
 def main(extra_char: str | None = None):
+    # Stage 2: load built-in CJK chars (人/中/山) from KanjiVG so all 5 chars have full trajectories
+    _STAGE2_CHARS = [("人", "ren"), ("中", "zhong"), ("山", "shan")]
+    if _kvg_parser is not None:
+        for cjk, key in _STAGE2_CHARS:
+            if key not in CALLIGRAPHY_TRAJECTORIES:
+                try:
+                    CALLIGRAPHY_TRAJECTORIES[key] = _kvg_parser.get_trajectory(cjk)
+                    print(f"[KanjiVG] Built-in '{key}' ({cjk}) → {len(CALLIGRAPHY_TRAJECTORIES[key])} strokes")
+                except Exception as e:
+                    print(f"[KanjiVG] Warning: could not load '{key}': {e}")
+
     # Stage 3: inject KanjiVG trajectory for --char argument
     if extra_char and _kvg_parser is not None:
         try:
