@@ -44,6 +44,17 @@ def _img_to_world(nx: float, ny: float) -> tuple[float, float]:
     return float(np.clip(world_x, 0.37, 0.73)), float(np.clip(world_y, -0.18, 0.18))
 
 
+def _norm_to_world(nx: float, ny: float) -> tuple[float, float]:
+    """Map seq_extract normalised coords [-1,1]² → robot world (x, y).
+
+    seq_extract uses a [-1,1] canvas where (0,0) is centre.
+    We map that linearly onto PAPER_HALF around PAPER_{X,Y}_CENTER.
+    """
+    world_x = PAPER_X_CENTER + nx * PAPER_HALF
+    world_y = PAPER_Y_CENTER + ny * PAPER_HALF
+    return float(np.clip(world_x, 0.37, 0.73)), float(np.clip(world_y, -0.18, 0.18))
+
+
 def npz_to_trajectory(npz_path: str | Path, samples: int = 8) -> list[list[tuple]]:
     """
     Load a seq_extract .npz file and return a Viser trajectory.
@@ -59,39 +70,38 @@ def npz_to_trajectory(npz_path: str | Path, samples: int = 8) -> list[list[tuple
     """
     data = np.load(npz_path, allow_pickle=True)
     strokes_raw: np.ndarray = data["strokes_data"]   # (N, 7)
-    image_size: int = int(data["image_size"])
+    # col 0: flag (1=pen-up, 0=pen-down)
+    # col 1-2: (x1,y1) stroke start in [-1,1]
+    # col 3-4: (x2,y2) stroke end   in [-1,1]
+    # col 5:   r2  end width
+    # col 6:   s2  intensity/pressure
 
-    # Collect pen-down segments into strokes
     strokes: list[list[tuple]] = []
     current_stroke: list[tuple] = []
 
     for row in strokes_raw:
         flag = int(row[0])
-        # Coords are stored in pixel space; normalise
-        x1, y1 = row[1] / image_size, row[2] / image_size
-        x2, y2 = row[3] / image_size, row[4] / image_size
-        intensity = float(np.clip(row[6], 0.0, 1.0))
-        pressure = intensity * PRESSURE_SCALE
+        x1, y1 = float(row[1]), float(row[2])
+        x2, y2 = float(row[3]), float(row[4])
+        intensity = float(np.clip(abs(row[6]), 0.0, 1.5))
+        pressure = min(intensity, 1.0) * PRESSURE_SCALE
 
         if flag == 1:
             # pen-up: finalise current stroke
             if current_stroke:
-                # add lift-off point
                 last = current_stroke[-1]
                 current_stroke.append((last[0], last[1], Z_PEN_UP, 0.0))
                 strokes.append(current_stroke)
                 current_stroke = []
             continue
 
-        wx1, wy1 = _img_to_world(x1, y1)
-        wx2, wy2 = _img_to_world(x2, y2)
+        wx1, wy1 = _norm_to_world(x1, y1)
+        wx2, wy2 = _norm_to_world(x2, y2)
         z = Z_HEAVY if pressure > 0.9 * PRESSURE_SCALE else Z_CONTACT
 
         if not current_stroke:
-            # approach from safe height
             current_stroke.append((wx1, wy1, Z_PEN_UP, 0.0))
 
-        # interpolate segment
         for i in range(samples + 1):
             t = i / samples
             wx = wx1 + (wx2 - wx1) * t

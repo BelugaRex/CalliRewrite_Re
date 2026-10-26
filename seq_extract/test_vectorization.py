@@ -438,7 +438,10 @@ def main_testing(test_image_base_dir, test_dataset, test_image_name,
     # loads the weights from checkpoint into our model
     snapshot_step = load_checkpoint(sess, model_dir, gen_model_pretrain=True)
     print('snapshot_step', snapshot_step)
-    load_checkpoint(sess, 'outputs/snapshot/pretrain_perceptual_model', perceptual_only=True)
+    # perceptual model only needed for training loss; skip at inference if weights absent
+    import os as _os
+    if _os.path.exists('outputs/snapshot/pretrain_perceptual_model'):
+        load_checkpoint(sess, 'outputs/snapshot/pretrain_perceptual_model', perceptual_only=True)
     sampling_dir = os.path.join(sampling_base_dir, test_dataset + '__' + model_name)
     os.makedirs(sampling_dir, exist_ok=True)
 
