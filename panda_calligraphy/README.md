@@ -24,16 +24,54 @@ The command above clears inherited ROS/Conda Python paths while using this folde
 
 The live browser view contains the Panda robot, a dark table, Xuan paper with a red guide grid, paperweights and the brush. Orbit and zoom the 3D view to inspect the tuft and paper. Playback moves the joints through inverse kinematics; contact deforms the tuft and deposits ink on the canvas.
 
-![Generated preview of the Panda robot pose, actual canvas output and deformable brush contact](docs/expected_simulation.png)
-
-This is a **generated static visualization**, not a browser screenshot. It uses the actual Panda URDF and this folder's FK/IK, `RealisticDeformableTuft` and `XuanPaperCanvas` functions to replay the built-in `yi` path. The raster panel preserves the code's image-coordinate mapping. The browser also displays the interactive controls described below. See [`docs/README.md`](docs/README.md) for how the preview was produced.
-
 For a short first run:
 
 1. Open **Calligraphy Trajectory Execution** and press **Reset Arm Pose**.
 2. Select **yi**, then press **Wash Paper (Clear)** under **Tuft & Xuan Paper Physics**.
 3. Press **Execute Character (Write)** and watch the arm and ink trail. The same button pauses/resumes playback and becomes **Replay Character** after completion.
 4. Try **yong** for the longer eight-group trajectory. Reset the arm and clear the paper before changing characters.
+
+## Watch the Panda draw `yi` in Viser
+
+This is a **recording of the actual Viser browser view**, captured on October 26, 2026 with **Character = yi**, **Writing Speed = 0.2**, and **Loop Playback off**. It shows the arm lowering the brush, making contact, sweeping across the paper, and lifting after the stroke. The animation crops the 3D viewport for clarity; the simulator source was unchanged.
+
+![Live Viser recording: the Panda approaches, presses, draws yi and lifts the brush](docs/viser_yi_drawing.gif)
+
+The four stages below are frames from that same continuous run:
+
+![Four actual Viser frames showing approach, first contact, drawing and lift-off](docs/viser_yi_sequence.png)
+
+| Stage | What the viewer is doing |
+| --- | --- |
+| **1. Approach** | IK moves the nominal tip toward the first waypoint above the paper. |
+| **2. Press** | The nominal tip moves below the paper plane; the contact model bends and splays the tuft and starts the ink trail. |
+| **3. Sweep** | The arm follows the built-in waypoint path while the contact tip deposits ink. |
+| **4. Lift** | The final waypoint raises the nominal tip to 25 mm in world Z, leaving the stroke on the paper. |
+
+To reproduce the sequence, follow the launch command above, select **yi**, reset the arm, clear the paper, set **Writing Speed** to **0.2**, then press **Execute Character (Write)**. Leave it running continuously to see the motion-dependent brush lag. At this speed the seven interpolated waypoint segments take roughly 16 seconds; the recording includes a short completed-state hold. Frame labels are approximate seconds from the recording start.
+
+The built-in `yi` path sweeps mainly along **world Y** while world X stays near 0.55 m. Its apparent direction depends on the camera. The flat `XuanPaperCanvas` image maps world Y to image rows, so its raw raster appears vertical. The live recording keeps the captured camera view; the component overview below rotates the canvas 90° counterclockwise and labels its Panda-base coordinates so `yi` reads horizontally.
+
+View the [full browser screenshot with the controls](docs/viser_yi_finished.jpg), [full-view MP4 recording](docs/viser_yi_recording.mp4), or [capture details](docs/viser_yi_capture.json). This demonstrates the hand-written trajectory player; it does not evaluate a learned CalliRewrite or SAC policy.
+
+## How the deformable brush works
+
+This separate diagram uses **actual meshes and bristle segments returned by `RealisticDeformableTuft`**. It compares a lifted brush, a stationary press, and a moving press. A vertical tool and motion along +X are used to make the deformation easy to see; the live Panda uses the orientation from its own forward kinematics.
+
+![Brush deformation explained: lifted, stationary contact and moving contact with cubic spine, paper constraint, drag lag and splay](docs/brush_deformation_explained.png)
+
+- **Contact and compression:** the paper is at world Z = 2 mm. Compression is the difference between that plane and the nominal rigid tip height; contact starts when compression exceeds 0.1 mm. In contact, the actual tip is placed on the paper. The nominal tip marker below the paper is a reference, not the rendered contact position.
+- **Bending and drag:** a cubic Bézier spine connects the ferrule/root to the actual tip. During horizontal motion, the contact tip lags opposite the direction of travel. The surrounding lofted mesh and individual bristle lines follow that spine; their sampled points are clamped to the paper plane.
+- **Splay and stroke width:** increasing compression expands the lower tuft and the returned circular ink-footprint radius. With the default parameters, the diagram's 6 mm compression gives a **7.01 mm footprint radius**; moving at 30 mm/s adds **7.5 mm tip lag**. The orange footprint is a stamp estimate, rather than the exact mesh boundary.
+- **Force estimate:** the same example returns about **1.30 N**. This is a parametric model output, not a calibrated force measurement. The stiffness slider changes this estimate; it does not change the mesh or footprint geometry.
+
+The source computes this contact geometry afresh each tick, without integrating bristle mass or a robot force/torque solver. The canvas stamps the footprint at the actual contact tip. Its force-dependent alpha is discarded by the current RGB conversion before display, and **Paper Absorbency** changes an outline radius rather than solving fluid diffusion. See the [SVG version](docs/brush_deformation_explained.svg), [exact numerical examples](docs/brush_deformation_metrics.json), and [regeneration instructions](docs/README.md#regenerate-the-brush-diagram).
+
+### Additional component overview
+
+![Component overview with the live Viser arm and table, horizontal yi labelled in Panda-base coordinates, and computed brush contact](docs/expected_simulation.png)
+
+The arm/table panel uses the latest **actual Viser capture**, preserving the scene's depth and placement. The completed `yi` canvas is rotated **90° counterclockwise**: **+Y of the Panda base frame runs rightward**, and **+X runs upward**. The robot base and world frames coincide in this simulator; the paper axes are labelled in metres. This presentation change leaves the simulated trajectory and robot pose unchanged. The scene capture, completed replay and contact detail show separate moments. See the [media guide and regeneration command](docs/README.md#component-overview).
 
 ## Browser controls
 
@@ -97,8 +135,10 @@ If the terminal warns that it could not load robot meshes, the brush/paper scene
 | --- | --- |
 | [`calligraphy_panda_viser_sim.py`](calligraphy_panda_viser_sim.py) | Server, Panda kinematics, built-in paths, canvas and browser controls. |
 | [`deformable_brush_physics.py`](deformable_brush_physics.py) | Contact-dependent tuft mesh, bristle segments, force estimate and footprint. |
-| [`docs/`](docs/README.md) | Expected-result image and its provenance. |
+| [`docs/`](docs/README.md) | Live Viser recording, `yi` stage sequence, brush diagram, provenance and media generators. |
 | `venv/` | Local generated Python environment; not source documentation. |
 | `calligraphy_panda_viser_toolkit.zip` | Archived toolkit; the launch command above runs the current unpacked Python files. |
 
-Verified on **2026-10-20**: the exact launch command above reached `[READY]` on port **8080** and loaded the Panda meshes with eight actuated joints. A deterministic replay through the actual IK/brush/canvas functions produced the preview image. The temporary documentation server was stopped after verification.
+Verified on **2026-10-20**: the exact launch command above reached `[READY]` on port **8080** and loaded the Panda meshes with eight actuated joints. A deterministic replay through the actual IK/brush/canvas functions produced the initial preview. The temporary documentation server was stopped after verification.
+
+Visuals updated on **2026-10-26**: recorded the live `yi` run on the server's printed port **8081**, verified completion through **Replay Character**, and generated the separate brush diagram from three direct model evaluations. The component overview combines the latest Viser capture with a horizontal, base-frame-labelled canvas. The visual assets can be rebuilt using the scripts documented in [`docs/README.md`](docs/README.md).

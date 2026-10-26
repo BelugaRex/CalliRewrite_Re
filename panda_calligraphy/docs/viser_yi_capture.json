@@ -1,0 +1,44 @@
+{
+  "captured_date": "2026-10-26",
+  "viewer_url": "http://localhost:8081/",
+  "character": "yi",
+  "writing_speed": 0.2,
+  "loop_playback": false,
+  "method": "CUA screenshots of the unmodified live Viser simulator during continuous playback; one upward zoom gesture before recording",
+  "frame_count": 497,
+  "elapsed_ms": 19002,
+  "selected_frames": [
+    {
+      "name": "approach",
+      "ms_from_first_capture": 407,
+      "file": "viser_yi_approach.jpg"
+    },
+    {
+      "name": "contact",
+      "ms_from_first_capture": 3509,
+      "file": "viser_yi_contact.jpg"
+    },
+    {
+      "name": "sweep",
+      "ms_from_first_capture": 8513,
+      "file": "viser_yi_sweep.jpg"
+    },
+    {
+      "name": "lift",
+      "ms_from_first_capture": 15898,
+      "file": "viser_yi_lift.jpg"
+    },
+    {
+      "name": "finished",
+      "ms_from_first_capture": 18502,
+      "file": "viser_yi_finished.jpg"
+    }
+  ],
+  "animation_crop": {
+    "x": 340,
+    "y": 70,
+    "width": 600,
+    "height": 600
+  },
+  "clock_note": "Times are wall time from first captured frame, approximately 0.2 seconds after Execute was clicked."
+}

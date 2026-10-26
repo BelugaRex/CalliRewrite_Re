@@ -1,0 +1,70 @@
+{
+  "source": "panda_calligraphy/deformable_brush_physics.py",
+  "source_sha256": "ab4baf8a9946f24c63fb1c495bc7b44a4e60aa782b9f8f6d412f34fb8886f1b8",
+  "model": "RealisticDeformableTuft (instantaneous parametric geometry)",
+  "disclaimer": "Normal force is a model estimate, not calibrated measurement. Stiffness changes the force estimate, not the mesh or footprint.",
+  "clamp_scope": "Loft-ring vertices and bristle points use max(paper_z, z). The apex is P3. Actual-tip contact clamping applies only for penetration > 1e-4 m; examples avoid the 0\u20130.1 mm deadband.",
+  "parameters": {
+    "length_m": 0.045,
+    "root_radius_m": 0.007,
+    "stiffness_parameter": 1.2,
+    "splay_factor": 1.4,
+    "paper_z_m": 0.002
+  },
+  "scenarios": {
+    "lifted": {
+      "nominal_height_above_paper_mm": 8.0,
+      "horizontal_speed_mm_s": 0.0,
+      "contact": false,
+      "compression_mm": 0.0,
+      "normal_force_estimate_N": 0.0,
+      "footprint_radius_mm": 0.0,
+      "lag_mm": 0.0,
+      "actual_tip_m": [
+        0.0,
+        0.0,
+        0.01
+      ],
+      "minimum_mesh_z_m": 0.009999999776482582,
+      "mesh_vertices": 141,
+      "mesh_triangles": 266,
+      "bristle_segments": 108
+    },
+    "pressed": {
+      "nominal_height_above_paper_mm": -6.0,
+      "horizontal_speed_mm_s": 0.0,
+      "contact": true,
+      "compression_mm": 6.0,
+      "normal_force_estimate_N": 1.3025177959780305,
+      "footprint_radius_mm": 7.0052896173027674,
+      "lag_mm": 0.0,
+      "actual_tip_m": [
+        0.0,
+        0.0,
+        0.002
+      ],
+      "minimum_mesh_z_m": 0.0020000000949949026,
+      "mesh_vertices": 141,
+      "mesh_triangles": 266,
+      "bristle_segments": 108
+    },
+    "moving": {
+      "nominal_height_above_paper_mm": -6.0,
+      "horizontal_speed_mm_s": 30.0,
+      "contact": true,
+      "compression_mm": 6.0,
+      "normal_force_estimate_N": 1.3025177959780305,
+      "footprint_radius_mm": 7.0052896173027674,
+      "lag_mm": 7.5,
+      "actual_tip_m": [
+        -0.0075,
+        0.0,
+        0.002
+      ],
+      "minimum_mesh_z_m": 0.0020000000949949026,
+      "mesh_vertices": 141,
+      "mesh_triangles": 266,
+      "bristle_segments": 108
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "source": "calligraphy_panda_viser_sim.py",
+  "source_sha256": "1955ee295e71ef1567a8d28178336c2407d22b54f63b26ff673b24b65ca1162b",
+  "brush_source_sha256": "ab4baf8a9946f24c63fb1c495bc7b44a4e60aa782b9f8f6d412f34fb8886f1b8",
+  "scene_image": "viser_yi_finished.jpg",
+  "scene_method": "Existing actual Viser browser capture, 600x600 viewport crop at x=340,y=70",
+  "replay": {
+    "samples": 196,
+    "contact_samples": 154,
+    "samples_per_segment": 28,
+    "velocity_interval_s": 0.015
+  },
+  "canvas_display": {
+    "rotation_degrees_counterclockwise": 90,
+    "horizontal_axis": "+Y_Panda_base",
+    "vertical_axis": "+X_Panda_base",
+    "paper_X_bounds_m": [
+      0.37,
+      0.73
+    ],
+    "paper_Y_bounds_m": [
+      -0.18,
+      0.18
+    ],
+    "ink_horizontal_span_px": 469,
+    "ink_vertical_span_px": 80,
+    "simulation_coordinates_changed": false
+  },
+  "contact_detail": {
+    "compression_mm": 7.2081671899930075,
+    "normal_force_estimate_N": 1.638232988319926
+  },
+  "note": "The live scene, complete replay canvas and peak-contact detail are separate views, not synchronized frames."
+}
