@@ -1,0 +1,246 @@
+{
+  "evidence_type": "deterministic kinematic execution, not browser recording",
+  "unseen_definition": "whole characters absent from pre-existing project demos; not a training-set claim",
+  "source": "KanjiVG, CC BY-SA 3.0, https://kanjivg.tagaini.net/",
+  "xml_sha256": "293dc9741cf6b6cb47aabb6235dca05da0ae4210590e139b5b1aebe37ddf72a4",
+  "source_sha256": {
+    "calligraphy_sim.py": "c11670e3f459f119721f1a9c6de3232edc41b391e649469f07d1f59c2c0fbfe3",
+    "kanjivg_to_trajectory.py": "11159b5760c95574e16b16f1ef09d9e8a9510ef9386aac8addb00df01966382f",
+    "execution.py": "0b765b5a8e5c47cc6513181215ff1a9efee4d93d9dd0b2f854c4b26d6afd5133",
+    "deformable_brush_physics.py": "ab4baf8a9946f24c63fb1c495bc7b44a4e60aa782b9f8f6d412f34fb8886f1b8",
+    "acceptance.py": "a1f7b30d3049b30c878c6c4cd58c99f48cba3b12c3fe96e9c3aa3e0cc4b580f1"
+  },
+  "units": "metres, radians, heuristic newtons",
+  "runs": [
+    {
+      "directory": "01_U6C38",
+      "char": "永",
+      "codepoint": "U+6C38",
+      "xml_id": "kvg:kanji_06c38",
+      "strokes": 5,
+      "samples": 1790,
+      "contact_samples": 547,
+      "max_ik_error_m": 1.2011044768981736e-06,
+      "max_tool_axis_error": 4.973836291765522e-06,
+      "travel_contact_samples": 0,
+      "force_range_n": [
+        0.01854324606015587,
+        2.2225136972417068
+      ],
+      "radius_range_m": [
+        0.0027501796753228213,
+        0.008245686969294534
+      ],
+      "ink_pixels": 62379,
+      "canvas_sha256": "d743ed09241c4525a45378a4cc935a4d1a9ab5f729f95163059b3b4c666ae539",
+      "trace_sha256": "59f96a0f0d7eb3417a4609d04d0ac65c1b4a58ec57391c6c0cbb90192bb35fdb"
+    },
+    {
+      "directory": "02_U6C38",
+      "char": "永",
+      "codepoint": "U+6C38",
+      "xml_id": "kvg:kanji_06c38",
+      "strokes": 5,
+      "samples": 1790,
+      "contact_samples": 547,
+      "max_ik_error_m": 1.2011044768981736e-06,
+      "max_tool_axis_error": 4.973836291765522e-06,
+      "travel_contact_samples": 0,
+      "force_range_n": [
+        0.01854324606015587,
+        2.2225136972417068
+      ],
+      "radius_range_m": [
+        0.0027501796753228213,
+        0.008245686969294534
+      ],
+      "ink_pixels": 62379,
+      "canvas_sha256": "d743ed09241c4525a45378a4cc935a4d1a9ab5f729f95163059b3b4c666ae539",
+      "trace_sha256": "59f96a0f0d7eb3417a4609d04d0ac65c1b4a58ec57391c6c0cbb90192bb35fdb"
+    },
+    {
+      "directory": "03_U4E00",
+      "char": "一",
+      "codepoint": "U+4E00",
+      "xml_id": "kvg:kanji_04e00",
+      "strokes": 1,
+      "samples": 838,
+      "contact_samples": 177,
+      "max_ik_error_m": 1.0827679398159222e-06,
+      "max_tool_axis_error": 4.561380497208102e-06,
+      "travel_contact_samples": 0,
+      "force_range_n": [
+        0.018557133921320763,
+        1.6930210855139582
+      ],
+      "radius_range_m": [
+        0.0027504642641082034,
+        0.0075809122716518195
+      ],
+      "ink_pixels": 19119,
+      "canvas_sha256": "ae79dc891b91bb75d84450ec3b1ce1f25eb86420a929b40d24c714470204a8d6",
+      "trace_sha256": "51256aea4cc8b0ca4daa9c630899004910870ca48150a242c1397128ae3675d8"
+    },
+    {
+      "directory": "04_U4E00",
+      "char": "一",
+      "codepoint": "U+4E00",
+      "xml_id": "kvg:kanji_04e00",
+      "strokes": 1,
+      "samples": 838,
+      "contact_samples": 177,
+      "max_ik_error_m": 1.0827679398159222e-06,
+      "max_tool_axis_error": 4.561380497208102e-06,
+      "travel_contact_samples": 0,
+      "force_range_n": [
+        0.018557133921320763,
+        1.6930210855139582
+      ],
+      "radius_range_m": [
+        0.0027504642641082034,
+        0.0075809122716518195
+      ],
+      "ink_pixels": 19119,
+      "canvas_sha256": "ae79dc891b91bb75d84450ec3b1ce1f25eb86420a929b40d24c714470204a8d6",
+      "trace_sha256": "51256aea4cc8b0ca4daa9c630899004910870ca48150a242c1397128ae3675d8"
+    },
+    {
+      "directory": "05_U4EBA",
+      "char": "人",
+      "codepoint": "U+4EBA",
+      "xml_id": "kvg:kanji_04eba",
+      "strokes": 2,
+      "samples": 1165,
+      "contact_samples": 285,
+      "max_ik_error_m": 1.2693654107044125e-06,
+      "max_tool_axis_error": 5.353396058439018e-06,
+      "travel_contact_samples": 0,
+      "force_range_n": [
+        0.018543897623962743,
+        2.2225366447382213
+      ],
+      "radius_range_m": [
+        0.0027501930299676,
+        0.008245713589948668
+      ],
+      "ink_pixels": 30425,
+      "canvas_sha256": "d420b4d973b925f382b2a03b74cfb708f52451ee29af8245eae00f7a53f1bf92",
+      "trace_sha256": "50cdd50a726244112590a4135334eed4cf6879b0a59b52d4db08feef57a5ac34"
+    },
+    {
+      "directory": "06_U4EBA",
+      "char": "人",
+      "codepoint": "U+4EBA",
+      "xml_id": "kvg:kanji_04eba",
+      "strokes": 2,
+      "samples": 1165,
+      "contact_samples": 285,
+      "max_ik_error_m": 1.2693654107044125e-06,
+      "max_tool_axis_error": 5.353396058439018e-06,
+      "travel_contact_samples": 0,
+      "force_range_n": [
+        0.018543897623962743,
+        2.2225366447382213
+      ],
+      "radius_range_m": [
+        0.0027501930299676,
+        0.008245713589948668
+      ],
+      "ink_pixels": 30425,
+      "canvas_sha256": "d420b4d973b925f382b2a03b74cfb708f52451ee29af8245eae00f7a53f1bf92",
+      "trace_sha256": "50cdd50a726244112590a4135334eed4cf6879b0a59b52d4db08feef57a5ac34"
+    },
+    {
+      "directory": "07_U6625",
+      "char": "春",
+      "codepoint": "U+6625",
+      "xml_id": "kvg:kanji_06625",
+      "strokes": 9,
+      "samples": 2856,
+      "contact_samples": 1027,
+      "max_ik_error_m": 1.1210901092526131e-06,
+      "max_tool_axis_error": 4.823436675268753e-06,
+      "travel_contact_samples": 0,
+      "force_range_n": [
+        0.018543479136995285,
+        2.2226100364935917
+      ],
+      "radius_range_m": [
+        0.002750184452567103,
+        0.0082457987282612
+      ],
+      "ink_pixels": 87029,
+      "canvas_sha256": "663f6824664fca26d4f996b90a25b17e2a3559da71f414cdadf98164837d7c2c",
+      "trace_sha256": "846dcba091ad0388832be7cda26bfd6d872c99e697eebee3c4b33ea22799d2d0"
+    },
+    {
+      "directory": "08_U6C5F",
+      "char": "江",
+      "codepoint": "U+6C5F",
+      "xml_id": "kvg:kanji_06c5f",
+      "strokes": 6,
+      "samples": 1746,
+      "contact_samples": 493,
+      "max_ik_error_m": 1.087502836853899e-06,
+      "max_tool_axis_error": 4.567696542215901e-06,
+      "travel_contact_samples": 0,
+      "force_range_n": [
+        0.018557192590750206,
+        1.6930230996579427
+      ],
+      "radius_range_m": [
+        0.0027504654660856945,
+        0.007580915022612366
+      ],
+      "ink_pixels": 53141,
+      "canvas_sha256": "2001a7e61d7935e07fccd975a93ad8b7960c8a9cb52d3a577202dbd1b552f83d",
+      "trace_sha256": "0235f2b63afc4fbf9b34f70589a107a0db5e782be46e6c5f462154a641d8b08e"
+    },
+    {
+      "directory": "09_U6708",
+      "char": "月",
+      "codepoint": "U+6708",
+      "xml_id": "kvg:kanji_06708",
+      "strokes": 4,
+      "samples": 1776,
+      "contact_samples": 574,
+      "max_ik_error_m": 1.1397825531820083e-06,
+      "max_tool_axis_error": 4.522379049756385e-06,
+      "travel_contact_samples": 0,
+      "force_range_n": [
+        0.08495951926440266,
+        1.3570909037746575
+      ],
+      "radius_range_m": [
+        0.00354669167568669,
+        0.0070914537898481705
+      ],
+      "ink_pixels": 56807,
+      "canvas_sha256": "9f882b658427dc3721d9c8243d8a5d851cb75a43682791cbe427db5a75884116",
+      "trace_sha256": "5b22d5e7b3f12499dd92c2e2b54694b1cb08f553832c5bf11ee613ed8b6093cd"
+    },
+    {
+      "directory": "10_U591C",
+      "char": "夜",
+      "codepoint": "U+591C",
+      "xml_id": "kvg:kanji_0591c",
+      "strokes": 8,
+      "samples": 2439,
+      "contact_samples": 804,
+      "max_ik_error_m": 1.2519963412783814e-06,
+      "max_tool_axis_error": 5.302199183790486e-06,
+      "travel_contact_samples": 0,
+      "force_range_n": [
+        0.018542913402488325,
+        2.22257811121179
+      ],
+      "radius_range_m": [
+        0.002750172856964166,
+        0.008245761693455414
+      ],
+      "ink_pixels": 75186,
+      "canvas_sha256": "e48cec224099bbbd306f53b955f0ddb84b3f3be502c6fc23cd375c5d32169361",
+      "trace_sha256": "ea7fc78b80384e020f641282338572cc0d0995b24d05862b7dacf3df72b092cd"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "pressure": 0.3,
+    "depth_m": 0.0026,
+    "diameter_mm": 10.453082226268702,
+    "center_rgb_mean": 123.33333333333333
+  },
+  {
+    "pressure": 0.8,
+    "depth_m": 0.005600000000000001,
+    "diameter_mm": 13.657575055648355,
+    "center_rgb_mean": 91.0
+  },
+  {
+    "pressure": 1.4,
+    "depth_m": 0.0092,
+    "diameter_mm": 16.49119513466459,
+    "center_rgb_mean": 46.0
+  }
+]

@@ -1,0 +1,64 @@
+{
+  "method": "real Viser connected-browser renders + same-tick canvas inset",
+  "source_sha256": {
+    "calligraphy_sim.py": "c11670e3f459f119721f1a9c6de3232edc41b391e649469f07d1f59c2c0fbfe3",
+    "execution.py": "0b765b5a8e5c47cc6513181215ff1a9efee4d93d9dd0b2f854c4b26d6afd5133",
+    "kanjivg_to_trajectory.py": "11159b5760c95574e16b16f1ef09d9e8a9510ef9386aac8addb00df01966382f",
+    "deformable_brush_physics.py": "ab4baf8a9946f24c63fb1c495bc7b44a4e60aa782b9f8f6d412f34fb8886f1b8",
+    "capture.py": "8027b296df20b6f62455682a0b19c54f304abe9fa9221a13adc455f20a49df1b"
+  },
+  "frames": 470,
+  "runs": {
+    "1": {
+      "file": "000063.jpg",
+      "seconds": 21.527710204944015,
+      "label": "U+6C38 | run 1/10 | sample 1790/1790"
+    },
+    "2": {
+      "file": "000118.jpg",
+      "seconds": 41.253266396932304,
+      "label": "U+6C38 | run 2/10 | sample 1262/1262"
+    },
+    "3": {
+      "file": "000137.jpg",
+      "seconds": 47.75369209994096,
+      "label": "U+4E00 | run 3/10 | sample 387/387"
+    },
+    "4": {
+      "file": "000159.jpg",
+      "seconds": 54.78314065292943,
+      "label": "U+4E00 | run 4/10 | sample 385/385"
+    },
+    "5": {
+      "file": "000187.jpg",
+      "seconds": 63.83300309802871,
+      "label": "U+4EBA | run 5/10 | sample 571/571"
+    },
+    "6": {
+      "file": "000214.jpg",
+      "seconds": 73.16787727293558,
+      "label": "U+4EBA | run 6/10 | sample 618/618"
+    },
+    "7": {
+      "file": "000298.jpg",
+      "seconds": 102.29038445698097,
+      "label": "U+6625 | run 7/10 | sample 2375/2375"
+    },
+    "8": {
+      "file": "000352.jpg",
+      "seconds": 121.11215224897023,
+      "label": "U+6C5F | run 8/10 | sample 1268/1268"
+    },
+    "9": {
+      "file": "000404.jpg",
+      "seconds": 138.502798823989,
+      "label": "U+6708 | run 9/10 | sample 1276/1276"
+    },
+    "10": {
+      "file": "000469.jpg",
+      "seconds": 160.54693855601363,
+      "label": "U+591C | run 10/10 | sample 1839/1839"
+    }
+  },
+  "video_sha256": "a661d0284234ac90588842352d30b01f30dcfe84d35d20ad1101e480fa37e1d8"
+}

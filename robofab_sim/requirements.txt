@@ -1,0 +1,6 @@
+# Tested with Python 3.11; CPU-only kinematic simulation.
+numpy==2.4.6
+Pillow==12.3.0
+viser==1.1.0
+yourdfpy==0.0.60
+robot_descriptions==3.3.0

@@ -1,0 +1,22 @@
+{
+  "char": "一",
+  "codepoint": "U+4E00",
+  "xml_id": "kvg:kanji_04e00",
+  "strokes": 1,
+  "samples": 838,
+  "contact_samples": 177,
+  "max_ik_error_m": 1.0827679398159222e-06,
+  "max_tool_axis_error": 4.561380497208102e-06,
+  "travel_contact_samples": 0,
+  "force_range_n": [
+    0.018557133921320763,
+    1.6930210855139582
+  ],
+  "radius_range_m": [
+    0.0027504642641082034,
+    0.0075809122716518195
+  ],
+  "ink_pixels": 19119,
+  "canvas_sha256": "ae79dc891b91bb75d84450ec3b1ce1f25eb86420a929b40d24c714470204a8d6",
+  "trace_sha256": "51256aea4cc8b0ca4daa9c630899004910870ca48150a242c1397128ae3675d8"
+}

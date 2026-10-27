@@ -1,7 +1,7 @@
 """
 KanjiVG → Robot Calligraphy Trajectory
 =======================================
-Parses kanjivg.xml and converts any CJK character into a list of stroke
+Parses kanjivg.xml and converts a character present in the dataset into stroke
 waypoints in robot world-frame coordinates, ready for the Viser simulator.
 
 Robot / canvas coordinate convention (matches XuanPaperCanvas in calligraphy_sim.py):
@@ -42,6 +42,13 @@ Z_SAFE  =  0.025            # pen-up clearance height
 Z_MED   = -0.003            # normal contact
 Z_HEAVY = -0.006            # heavy press (stroke ends, 捺 foot)
 
+
+def pressure_to_z(pressure: float) -> float:
+    """Heuristic brush compression, not a measured force controller (metres)."""
+    if not np.isfinite(pressure) or not 0.0 <= pressure <= 1.5:
+        raise ValueError("Pressure must be finite and in [0, 1.5]")
+    return 0.002 - (0.0008 + 0.006 * pressure)
+
 # Stroke-type pressure profiles: (start, mid, end) pressure values
 # Keyed on the KanjiVG ns0:type attribute (SVG stroke classifier)
 _STROKE_PRESSURE: dict[str, tuple[float, float, float]] = {
@@ -66,9 +73,18 @@ SVG_SIZE = 109.0            # KanjiVG canvas size in SVG units
 
 def _parse_svg_path(d: str, n_interp: int = 8) -> list[tuple[float, float]]:
     """Convert an SVG path string to a list of (x, y) points in SVG units."""
+    if n_interp < 1:
+        raise ValueError("n_interp must be positive")
+    commands = re.findall(r"[A-DF-Za-df-z]", d)  # exclude numeric exponent e/E
+    if any(c not in "MLCQZmlcqz" for c in commands):
+        raise ValueError("Unsupported SVG path command")
+    if not d.strip().startswith(("M", "m")):
+        raise ValueError("SVG stroke must start with moveto")
     # Split into (command-letter, [numbers...]) groups, respecting implicit repetition
     token_re = re.compile(r"([MLCQZmlcqz])|"
                           r"([-+]?(?:\d+\.?\d*|\.\d+)(?:[eE][-+]?\d+)?)")
+    if re.sub(r"[\s,]+", "", token_re.sub("", d)):
+        raise ValueError("Invalid SVG path token")
     raw = [(m.group(1), m.group(2)) for m in token_re.finditer(d)]
 
     points: list[tuple[float, float]] = []
@@ -76,14 +92,23 @@ def _parse_svg_path(d: str, n_interp: int = 8) -> list[tuple[float, float]]:
     cmd = "M"
     nums: list[float] = []
     idx = 0
+    start = None
 
     while idx < len(raw):
         letter, num = raw[idx]
         if letter:
+            if nums:
+                raise ValueError("Incomplete SVG command arguments")
             cmd = letter
             idx += 1
             nums = []
+            if cmd in "Zz":
+                if start is not None:
+                    points.append(start)
+                    cx, cy = start
             continue
+        if cmd in "Zz":
+            raise ValueError("Numbers after SVG closepath require a new command")
         # accumulate numbers until we have enough for one implicit repetition
         nums.append(float(num))
         idx += 1
@@ -102,6 +127,7 @@ def _parse_svg_path(d: str, n_interp: int = 8) -> list[tuple[float, float]]:
                 x += cx; y += cy
             points.append((x, y))
             cx, cy = x, y
+            start = (x, y)
             cmd = "L" if cmd == "M" else "l"
 
         elif cmd in ("L", "l"):
@@ -144,6 +170,10 @@ def _parse_svg_path(d: str, n_interp: int = 8) -> list[tuple[float, float]]:
             points.append((x, y))
             cx, cy = x, y
 
+    if nums:
+        raise ValueError("Incomplete SVG command arguments")
+    if not np.all(np.isfinite(points)):
+        raise ValueError("Non-finite SVG coordinates")
     return points
 
 
@@ -170,7 +200,7 @@ def _pressure_z(idx: int, total: int, profile: tuple[float, float, float]
     """Return (z, pressure) for waypoint idx out of total."""
     p_start, p_mid, p_end = profile
     if total <= 1:
-        return Z_MED, p_mid
+        return pressure_to_z(p_mid), p_mid
     t = idx / (total - 1)
     if t < 0.2:
         p = p_start + (p_mid - p_start) * (t / 0.2)
@@ -178,9 +208,7 @@ def _pressure_z(idx: int, total: int, profile: tuple[float, float, float]
         p = p_mid + (p_end - p_mid) * ((t - 0.8) / 0.2)
     else:
         p = p_mid
-    # Heavy press → deeper contact
-    z = Z_HEAVY if p >= 1.3 else Z_MED
-    return z, round(float(p), 2)
+    return pressure_to_z(float(p)), float(p)
 
 
 # ---------------------------------------------------------------------------
@@ -193,6 +221,8 @@ class KanjiVGParser:
         self._root = self._tree.getroot()
 
     def _find_kanji(self, char: str) -> ET.Element | None:
+        if len(char) != 1:
+            raise ValueError("Input must be exactly one Unicode character")
         code = f"{ord(char):05x}"
         for kanji in self._root:
             kid = kanji.get("id", "")
@@ -201,7 +231,7 @@ class KanjiVGParser:
                 return kanji
         # Fallback: accept first variant
         for kanji in self._root:
-            if f"kvg:kanji_{code}" in kanji.get("id", ""):
+            if kanji.get("id", "").startswith(f"kvg:kanji_{code}-"):
                 return kanji
         return None
 
@@ -255,6 +285,8 @@ class KanjiVGParser:
 
             trajectory.append(stroke)
 
+        if not trajectory:
+            raise ValueError(f"Character '{char}' has no usable strokes")
         return trajectory
 
     def available(self, char: str) -> bool:

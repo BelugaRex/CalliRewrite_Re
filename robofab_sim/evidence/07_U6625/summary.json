@@ -1,0 +1,22 @@
+{
+  "char": "春",
+  "codepoint": "U+6625",
+  "xml_id": "kvg:kanji_06625",
+  "strokes": 9,
+  "samples": 2856,
+  "contact_samples": 1027,
+  "max_ik_error_m": 1.1210901092526131e-06,
+  "max_tool_axis_error": 4.823436675268753e-06,
+  "travel_contact_samples": 0,
+  "force_range_n": [
+    0.018543479136995285,
+    2.2226100364935917
+  ],
+  "radius_range_m": [
+    0.002750184452567103,
+    0.0082457987282612
+  ],
+  "ink_pixels": 87029,
+  "canvas_sha256": "663f6824664fca26d4f996b90a25b17e2a3559da71f414cdadf98164837d7c2c",
+  "trace_sha256": "846dcba091ad0388832be7cda26bfd6d872c99e697eebee3c4b33ea22799d2d0"
+}

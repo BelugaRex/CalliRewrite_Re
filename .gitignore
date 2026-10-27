@@ -17,6 +17,12 @@ panda_calligraphy/venv/
 
 # RoboFab: KanjiVG data file is large (~30MB), download via robofab_sim/data/download_kanjivg.sh
 robofab_sim/data/kanjivg.xml
+robofab_sim/data/*.gz
+robofab_sim/data/*.part
+# Browser source frames are regenerable; retain video, final snapshots and timing.
+robofab_sim/evidence/browser/frames/
+robofab_sim/evidence/browser/frames.txt
+.venv/
 
 # Python cache
 __pycache__/

@@ -1,0 +1,2355 @@
+{
+  "capture_method": "Viser CameraHandle.get_render from connected WebGL browser; same-tick canvas inset",
+  "frames": [
+    {
+      "file": "000000.jpg",
+      "seconds": 0.7897331449203193,
+      "label": "U+6C38 | run 1/10 | sample 1/1790"
+    },
+    {
+      "file": "000001.jpg",
+      "seconds": 1.2078170259483159,
+      "label": "U+6C38 | run 1/10 | sample 37/1790"
+    },
+    {
+      "file": "000002.jpg",
+      "seconds": 1.478244730969891,
+      "label": "U+6C38 | run 1/10 | sample 72/1790"
+    },
+    {
+      "file": "000003.jpg",
+      "seconds": 1.8524744759779423,
+      "label": "U+6C38 | run 1/10 | sample 108/1790"
+    },
+    {
+      "file": "000004.jpg",
+      "seconds": 2.1600626159925014,
+      "label": "U+6C38 | run 1/10 | sample 144/1790"
+    },
+    {
+      "file": "000005.jpg",
+      "seconds": 2.55536633299198,
+      "label": "U+6C38 | run 1/10 | sample 180/1790"
+    },
+    {
+      "file": "000006.jpg",
+      "seconds": 2.8293049699859694,
+      "label": "U+6C38 | run 1/10 | sample 216/1790"
+    },
+    {
+      "file": "000007.jpg",
+      "seconds": 3.1787544030230492,
+      "label": "U+6C38 | run 1/10 | sample 252/1790"
+    },
+    {
+      "file": "000008.jpg",
+      "seconds": 3.5872651289682835,
+      "label": "U+6C38 | run 1/10 | sample 285/1790"
+    },
+    {
+      "file": "000009.jpg",
+      "seconds": 3.8727867259876803,
+      "label": "U+6C38 | run 1/10 | sample 318/1790"
+    },
+    {
+      "file": "000010.jpg",
+      "seconds": 4.265582934953272,
+      "label": "U+6C38 | run 1/10 | sample 350/1790"
+    },
+    {
+      "file": "000011.jpg",
+      "seconds": 4.682042186963372,
+      "label": "U+6C38 | run 1/10 | sample 386/1790"
+    },
+    {
+      "file": "000012.jpg",
+      "seconds": 5.137180128949694,
+      "label": "U+6C38 | run 1/10 | sample 422/1790"
+    },
+    {
+      "file": "000013.jpg",
+      "seconds": 5.428449825965799,
+      "label": "U+6C38 | run 1/10 | sample 440/1790"
+    },
+    {
+      "file": "000014.jpg",
+      "seconds": 5.777974818018265,
+      "label": "U+6C38 | run 1/10 | sample 476/1790"
+    },
+    {
+      "file": "000015.jpg",
+      "seconds": 6.165091268951073,
+      "label": "U+6C38 | run 1/10 | sample 512/1790"
+    },
+    {
+      "file": "000016.jpg",
+      "seconds": 6.501304456964135,
+      "label": "U+6C38 | run 1/10 | sample 547/1790"
+    },
+    {
+      "file": "000017.jpg",
+      "seconds": 6.764495139941573,
+      "label": "U+6C38 | run 1/10 | sample 565/1790"
+    },
+    {
+      "file": "000018.jpg",
+      "seconds": 7.085733341984451,
+      "label": "U+6C38 | run 1/10 | sample 601/1790"
+    },
+    {
+      "file": "000019.jpg",
+      "seconds": 7.3674336889525875,
+      "label": "U+6C38 | run 1/10 | sample 636/1790"
+    },
+    {
+      "file": "000020.jpg",
+      "seconds": 7.645705870934762,
+      "label": "U+6C38 | run 1/10 | sample 669/1790"
+    },
+    {
+      "file": "000021.jpg",
+      "seconds": 7.940660131978802,
+      "label": "U+6C38 | run 1/10 | sample 704/1790"
+    },
+    {
+      "file": "000022.jpg",
+      "seconds": 8.272624493925832,
+      "label": "U+6C38 | run 1/10 | sample 740/1790"
+    },
+    {
+      "file": "000023.jpg",
+      "seconds": 8.553067718981765,
+      "label": "U+6C38 | run 1/10 | sample 775/1790"
+    },
+    {
+      "file": "000024.jpg",
+      "seconds": 8.80161164002493,
+      "label": "U+6C38 | run 1/10 | sample 807/1790"
+    },
+    {
+      "file": "000025.jpg",
+      "seconds": 9.14064401993528,
+      "label": "U+6C38 | run 1/10 | sample 843/1790"
+    },
+    {
+      "file": "000026.jpg",
+      "seconds": 9.404240061994642,
+      "label": "U+6C38 | run 1/10 | sample 875/1790"
+    },
+    {
+      "file": "000027.jpg",
+      "seconds": 9.763057384989224,
+      "label": "U+6C38 | run 1/10 | sample 911/1790"
+    },
+    {
+      "file": "000028.jpg",
+      "seconds": 10.109055166016333,
+      "label": "U+6C38 | run 1/10 | sample 947/1790"
+    },
+    {
+      "file": "000029.jpg",
+      "seconds": 10.42248314700555,
+      "label": "U+6C38 | run 1/10 | sample 983/1790"
+    },
+    {
+      "file": "000030.jpg",
+      "seconds": 10.700838350923732,
+      "label": "U+6C38 | run 1/10 | sample 1017/1790"
+    },
+    {
+      "file": "000031.jpg",
+      "seconds": 11.010681913001463,
+      "label": "U+6C38 | run 1/10 | sample 1052/1790"
+    },
+    {
+      "file": "000032.jpg",
+      "seconds": 11.258364918990992,
+      "label": "U+6C38 | run 1/10 | sample 1084/1790"
+    },
+    {
+      "file": "000033.jpg",
+      "seconds": 11.537445173948072,
+      "label": "U+6C38 | run 1/10 | sample 1118/1790"
+    },
+    {
+      "file": "000034.jpg",
+      "seconds": 11.82831162691582,
+      "label": "U+6C38 | run 1/10 | sample 1153/1790"
+    },
+    {
+      "file": "000035.jpg",
+      "seconds": 12.16151915199589,
+      "label": "U+6C38 | run 1/10 | sample 1187/1790"
+    },
+    {
+      "file": "000036.jpg",
+      "seconds": 12.562093787943013,
+      "label": "U+6C38 | run 1/10 | sample 1223/1790"
+    },
+    {
+      "file": "000037.jpg",
+      "seconds": 12.879716163966805,
+      "label": "U+6C38 | run 1/10 | sample 1241/1790"
+    },
+    {
+      "file": "000038.jpg",
+      "seconds": 13.214868784998544,
+      "label": "U+6C38 | run 1/10 | sample 1259/1790"
+    },
+    {
+      "file": "000039.jpg",
+      "seconds": 13.548503577010706,
+      "label": "U+6C38 | run 1/10 | sample 1295/1790"
+    },
+    {
+      "file": "000040.jpg",
+      "seconds": 13.9787133699283,
+      "label": "U+6C38 | run 1/10 | sample 1331/1790"
+    },
+    {
+      "file": "000041.jpg",
+      "seconds": 14.298810782958753,
+      "label": "U+6C38 | run 1/10 | sample 1349/1790"
+    },
+    {
+      "file": "000042.jpg",
+      "seconds": 14.567471074988134,
+      "label": "U+6C38 | run 1/10 | sample 1367/1790"
+    },
+    {
+      "file": "000043.jpg",
+      "seconds": 14.904665297013707,
+      "label": "U+6C38 | run 1/10 | sample 1403/1790"
+    },
+    {
+      "file": "000044.jpg",
+      "seconds": 15.328692125971429,
+      "label": "U+6C38 | run 1/10 | sample 1439/1790"
+    },
+    {
+      "file": "000045.jpg",
+      "seconds": 15.714014973025769,
+      "label": "U+6C38 | run 1/10 | sample 1475/1790"
+    },
+    {
+      "file": "000046.jpg",
+      "seconds": 16.047639988013543,
+      "label": "U+6C38 | run 1/10 | sample 1510/1790"
+    },
+    {
+      "file": "000047.jpg",
+      "seconds": 16.4036715059774,
+      "label": "U+6C38 | run 1/10 | sample 1528/1790"
+    },
+    {
+      "file": "000048.jpg",
+      "seconds": 16.74304199393373,
+      "label": "U+6C38 | run 1/10 | sample 1564/1790"
+    },
+    {
+      "file": "000049.jpg",
+      "seconds": 17.081395637011155,
+      "label": "U+6C38 | run 1/10 | sample 1600/1790"
+    },
+    {
+      "file": "000050.jpg",
+      "seconds": 17.435124985990115,
+      "label": "U+6C38 | run 1/10 | sample 1636/1790"
+    },
+    {
+      "file": "000051.jpg",
+      "seconds": 17.76605043793097,
+      "label": "U+6C38 | run 1/10 | sample 1672/1790"
+    },
+    {
+      "file": "000052.jpg",
+      "seconds": 18.232146497932263,
+      "label": "U+6C38 | run 1/10 | sample 1708/1790"
+    },
+    {
+      "file": "000053.jpg",
+      "seconds": 18.593079185928218,
+      "label": "U+6C38 | run 1/10 | sample 1726/1790"
+    },
+    {
+      "file": "000054.jpg",
+      "seconds": 18.98518548498396,
+      "label": "U+6C38 | run 1/10 | sample 1744/1790"
+    },
+    {
+      "file": "000055.jpg",
+      "seconds": 19.271793004940264,
+      "label": "U+6C38 | run 1/10 | sample 1762/1790"
+    },
+    {
+      "file": "000056.jpg",
+      "seconds": 19.559901003027335,
+      "label": "U+6C38 | run 1/10 | sample 1780/1790"
+    },
+    {
+      "file": "000057.jpg",
+      "seconds": 19.81721693801228,
+      "label": "U+6C38 | run 1/10 | sample 1790/1790"
+    },
+    {
+      "file": "000058.jpg",
+      "seconds": 20.151012092013843,
+      "label": "U+6C38 | run 1/10 | sample 1790/1790"
+    },
+    {
+      "file": "000059.jpg",
+      "seconds": 20.447932222974487,
+      "label": "U+6C38 | run 1/10 | sample 1790/1790"
+    },
+    {
+      "file": "000060.jpg",
+      "seconds": 20.71610341302585,
+      "label": "U+6C38 | run 1/10 | sample 1790/1790"
+    },
+    {
+      "file": "000061.jpg",
+      "seconds": 21.01371011394076,
+      "label": "U+6C38 | run 1/10 | sample 1790/1790"
+    },
+    {
+      "file": "000062.jpg",
+      "seconds": 21.30012276303023,
+      "label": "U+6C38 | run 1/10 | sample 1790/1790"
+    },
+    {
+      "file": "000063.jpg",
+      "seconds": 21.527710204944015,
+      "label": "U+6C38 | run 1/10 | sample 1790/1790"
+    },
+    {
+      "file": "000064.jpg",
+      "seconds": 21.936612854944542,
+      "label": "U+6C38 | run 2/10 | sample 7/1262"
+    },
+    {
+      "file": "000065.jpg",
+      "seconds": 22.28276830096729,
+      "label": "U+6C38 | run 2/10 | sample 41/1262"
+    },
+    {
+      "file": "000066.jpg",
+      "seconds": 22.676680419943295,
+      "label": "U+6C38 | run 2/10 | sample 77/1262"
+    },
+    {
+      "file": "000067.jpg",
+      "seconds": 22.939733486971818,
+      "label": "U+6C38 | run 2/10 | sample 108/1262"
+    },
+    {
+      "file": "000068.jpg",
+      "seconds": 23.244148597936146,
+      "label": "U+6C38 | run 2/10 | sample 126/1262"
+    },
+    {
+      "file": "000069.jpg",
+      "seconds": 23.666277296026237,
+      "label": "U+6C38 | run 2/10 | sample 161/1262"
+    },
+    {
+      "file": "000070.jpg",
+      "seconds": 23.95232052099891,
+      "label": "U+6C38 | run 2/10 | sample 179/1262"
+    },
+    {
+      "file": "000071.jpg",
+      "seconds": 24.356543096946552,
+      "label": "U+6C38 | run 2/10 | sample 215/1262"
+    },
+    {
+      "file": "000072.jpg",
+      "seconds": 24.71862453292124,
+      "label": "U+6C38 | run 2/10 | sample 251/1262"
+    },
+    {
+      "file": "000073.jpg",
+      "seconds": 25.00270824600011,
+      "label": "U+6C38 | run 2/10 | sample 286/1262"
+    },
+    {
+      "file": "000074.jpg",
+      "seconds": 25.41113022400532,
+      "label": "U+6C38 | run 2/10 | sample 322/1262"
+    },
+    {
+      "file": "000075.jpg",
+      "seconds": 25.745712478994392,
+      "label": "U+6C38 | run 2/10 | sample 340/1262"
+    },
+    {
+      "file": "000076.jpg",
+      "seconds": 26.03335227794014,
+      "label": "U+6C38 | run 2/10 | sample 358/1262"
+    },
+    {
+      "file": "000077.jpg",
+      "seconds": 26.41169189696666,
+      "label": "U+6C38 | run 2/10 | sample 376/1262"
+    },
+    {
+      "file": "000078.jpg",
+      "seconds": 26.760897503932938,
+      "label": "U+6C38 | run 2/10 | sample 394/1262"
+    },
+    {
+      "file": "000079.jpg",
+      "seconds": 27.083700135932304,
+      "label": "U+6C38 | run 2/10 | sample 412/1262"
+    },
+    {
+      "file": "000080.jpg",
+      "seconds": 27.561361300991848,
+      "label": "U+6C38 | run 2/10 | sample 448/1262"
+    },
+    {
+      "file": "000081.jpg",
+      "seconds": 27.91123071697075,
+      "label": "U+6C38 | run 2/10 | sample 466/1262"
+    },
+    {
+      "file": "000082.jpg",
+      "seconds": 28.278060785960406,
+      "label": "U+6C38 | run 2/10 | sample 502/1262"
+    },
+    {
+      "file": "000083.jpg",
+      "seconds": 28.63138454791624,
+      "label": "U+6C38 | run 2/10 | sample 520/1262"
+    },
+    {
+      "file": "000084.jpg",
+      "seconds": 29.040548495948315,
+      "label": "U+6C38 | run 2/10 | sample 556/1262"
+    },
+    {
+      "file": "000085.jpg",
+      "seconds": 29.370212954934686,
+      "label": "U+6C38 | run 2/10 | sample 592/1262"
+    },
+    {
+      "file": "000086.jpg",
+      "seconds": 29.740688781021163,
+      "label": "U+6C38 | run 2/10 | sample 628/1262"
+    },
+    {
+      "file": "000087.jpg",
+      "seconds": 30.017451314022765,
+      "label": "U+6C38 | run 2/10 | sample 646/1262"
+    },
+    {
+      "file": "000088.jpg",
+      "seconds": 30.40772333391942,
+      "label": "U+6C38 | run 2/10 | sample 679/1262"
+    },
+    {
+      "file": "000089.jpg",
+      "seconds": 30.771465234924108,
+      "label": "U+6C38 | run 2/10 | sample 715/1262"
+    },
+    {
+      "file": "000090.jpg",
+      "seconds": 31.152763778925873,
+      "label": "U+6C38 | run 2/10 | sample 751/1262"
+    },
+    {
+      "file": "000091.jpg",
+      "seconds": 31.610991786932573,
+      "label": "U+6C38 | run 2/10 | sample 784/1262"
+    },
+    {
+      "file": "000092.jpg",
+      "seconds": 31.9233498419635,
+      "label": "U+6C38 | run 2/10 | sample 802/1262"
+    },
+    {
+      "file": "000093.jpg",
+      "seconds": 32.41164076095447,
+      "label": "U+6C38 | run 2/10 | sample 838/1262"
+    },
+    {
+      "file": "000094.jpg",
+      "seconds": 32.816290447022766,
+      "label": "U+6C38 | run 2/10 | sample 856/1262"
+    },
+    {
+      "file": "000095.jpg",
+      "seconds": 33.144115095958114,
+      "label": "U+6C38 | run 2/10 | sample 874/1262"
+    },
+    {
+      "file": "000096.jpg",
+      "seconds": 33.43487506301608,
+      "label": "U+6C38 | run 2/10 | sample 892/1262"
+    },
+    {
+      "file": "000097.jpg",
+      "seconds": 33.85857045301236,
+      "label": "U+6C38 | run 2/10 | sample 910/1262"
+    },
+    {
+      "file": "000098.jpg",
+      "seconds": 34.26116544299293,
+      "label": "U+6C38 | run 2/10 | sample 928/1262"
+    },
+    {
+      "file": "000099.jpg",
+      "seconds": 34.757612596964464,
+      "label": "U+6C38 | run 2/10 | sample 946/1262"
+    },
+    {
+      "file": "000100.jpg",
+      "seconds": 35.17803690594155,
+      "label": "U+6C38 | run 2/10 | sample 964/1262"
+    },
+    {
+      "file": "000101.jpg",
+      "seconds": 35.493789247004315,
+      "label": "U+6C38 | run 2/10 | sample 982/1262"
+    },
+    {
+      "file": "000102.jpg",
+      "seconds": 35.92686406802386,
+      "label": "U+6C38 | run 2/10 | sample 1000/1262"
+    },
+    {
+      "file": "000103.jpg",
+      "seconds": 36.34109045099467,
+      "label": "U+6C38 | run 2/10 | sample 1018/1262"
+    },
+    {
+      "file": "000104.jpg",
+      "seconds": 36.66377068194561,
+      "label": "U+6C38 | run 2/10 | sample 1036/1262"
+    },
+    {
+      "file": "000105.jpg",
+      "seconds": 37.059765224927105,
+      "label": "U+6C38 | run 2/10 | sample 1072/1262"
+    },
+    {
+      "file": "000106.jpg",
+      "seconds": 37.33997713995632,
+      "label": "U+6C38 | run 2/10 | sample 1090/1262"
+    },
+    {
+      "file": "000107.jpg",
+      "seconds": 37.701437082956545,
+      "label": "U+6C38 | run 2/10 | sample 1133/1262"
+    },
+    {
+      "file": "000108.jpg",
+      "seconds": 38.08199989097193,
+      "label": "U+6C38 | run 2/10 | sample 1168/1262"
+    },
+    {
+      "file": "000109.jpg",
+      "seconds": 38.379013685975224,
+      "label": "U+6C38 | run 2/10 | sample 1186/1262"
+    },
+    {
+      "file": "000110.jpg",
+      "seconds": 38.78135865100194,
+      "label": "U+6C38 | run 2/10 | sample 1222/1262"
+    },
+    {
+      "file": "000111.jpg",
+      "seconds": 39.1446662240196,
+      "label": "U+6C38 | run 2/10 | sample 1258/1262"
+    },
+    {
+      "file": "000112.jpg",
+      "seconds": 39.41624873399269,
+      "label": "U+6C38 | run 2/10 | sample 1262/1262"
+    },
+    {
+      "file": "000113.jpg",
+      "seconds": 39.72023650095798,
+      "label": "U+6C38 | run 2/10 | sample 1262/1262"
+    },
+    {
+      "file": "000114.jpg",
+      "seconds": 40.08226678601932,
+      "label": "U+6C38 | run 2/10 | sample 1262/1262"
+    },
+    {
+      "file": "000115.jpg",
+      "seconds": 40.47506973601412,
+      "label": "U+6C38 | run 2/10 | sample 1262/1262"
+    },
+    {
+      "file": "000116.jpg",
+      "seconds": 40.7844042169163,
+      "label": "U+6C38 | run 2/10 | sample 1262/1262"
+    },
+    {
+      "file": "000117.jpg",
+      "seconds": 41.01709324494004,
+      "label": "U+6C38 | run 2/10 | sample 1262/1262"
+    },
+    {
+      "file": "000118.jpg",
+      "seconds": 41.253266396932304,
+      "label": "U+6C38 | run 2/10 | sample 1262/1262"
+    },
+    {
+      "file": "000119.jpg",
+      "seconds": 41.60958508797921,
+      "label": "U+4E00 | run 3/10 | sample 36/387"
+    },
+    {
+      "file": "000120.jpg",
+      "seconds": 41.97546354599763,
+      "label": "U+4E00 | run 3/10 | sample 72/387"
+    },
+    {
+      "file": "000121.jpg",
+      "seconds": 42.35061834193766,
+      "label": "U+4E00 | run 3/10 | sample 108/387"
+    },
+    {
+      "file": "000122.jpg",
+      "seconds": 42.725231656921096,
+      "label": "U+4E00 | run 3/10 | sample 142/387"
+    },
+    {
+      "file": "000123.jpg",
+      "seconds": 43.04281377594452,
+      "label": "U+4E00 | run 3/10 | sample 178/387"
+    },
+    {
+      "file": "000124.jpg",
+      "seconds": 43.37720151792746,
+      "label": "U+4E00 | run 3/10 | sample 196/387"
+    },
+    {
+      "file": "000125.jpg",
+      "seconds": 43.74487911397591,
+      "label": "U+4E00 | run 3/10 | sample 214/387"
+    },
+    {
+      "file": "000126.jpg",
+      "seconds": 44.129775882931426,
+      "label": "U+4E00 | run 3/10 | sample 250/387"
+    },
+    {
+      "file": "000127.jpg",
+      "seconds": 44.422044195001945,
+      "label": "U+4E00 | run 3/10 | sample 268/387"
+    },
+    {
+      "file": "000128.jpg",
+      "seconds": 44.8541344209807,
+      "label": "U+4E00 | run 3/10 | sample 304/387"
+    },
+    {
+      "file": "000129.jpg",
+      "seconds": 45.254646625951864,
+      "label": "U+4E00 | run 3/10 | sample 340/387"
+    },
+    {
+      "file": "000130.jpg",
+      "seconds": 45.596001800964586,
+      "label": "U+4E00 | run 3/10 | sample 376/387"
+    },
+    {
+      "file": "000131.jpg",
+      "seconds": 45.934854473918676,
+      "label": "U+4E00 | run 3/10 | sample 387/387"
+    },
+    {
+      "file": "000132.jpg",
+      "seconds": 46.276937467977405,
+      "label": "U+4E00 | run 3/10 | sample 387/387"
+    },
+    {
+      "file": "000133.jpg",
+      "seconds": 46.56618112092838,
+      "label": "U+4E00 | run 3/10 | sample 387/387"
+    },
+    {
+      "file": "000134.jpg",
+      "seconds": 46.861168499919586,
+      "label": "U+4E00 | run 3/10 | sample 387/387"
+    },
+    {
+      "file": "000135.jpg",
+      "seconds": 47.16994871199131,
+      "label": "U+4E00 | run 3/10 | sample 387/387"
+    },
+    {
+      "file": "000136.jpg",
+      "seconds": 47.46929071692284,
+      "label": "U+4E00 | run 3/10 | sample 387/387"
+    },
+    {
+      "file": "000137.jpg",
+      "seconds": 47.75369209994096,
+      "label": "U+4E00 | run 3/10 | sample 387/387"
+    },
+    {
+      "file": "000138.jpg",
+      "seconds": 48.030020070960745,
+      "label": "U+4E00 | run 4/10 | sample 18/385"
+    },
+    {
+      "file": "000139.jpg",
+      "seconds": 48.33985568897333,
+      "label": "U+4E00 | run 4/10 | sample 54/385"
+    },
+    {
+      "file": "000140.jpg",
+      "seconds": 48.599345515016466,
+      "label": "U+4E00 | run 4/10 | sample 72/385"
+    },
+    {
+      "file": "000141.jpg",
+      "seconds": 49.00270107097458,
+      "label": "U+4E00 | run 4/10 | sample 108/385"
+    },
+    {
+      "file": "000142.jpg",
+      "seconds": 49.322748697013594,
+      "label": "U+4E00 | run 4/10 | sample 126/385"
+    },
+    {
+      "file": "000143.jpg",
+      "seconds": 49.6917258289177,
+      "label": "U+4E00 | run 4/10 | sample 162/385"
+    },
+    {
+      "file": "000144.jpg",
+      "seconds": 50.01085416600108,
+      "label": "U+4E00 | run 4/10 | sample 180/385"
+    },
+    {
+      "file": "000145.jpg",
+      "seconds": 50.34821911202744,
+      "label": "U+4E00 | run 4/10 | sample 198/385"
+    },
+    {
+      "file": "000146.jpg",
+      "seconds": 50.65157464996446,
+      "label": "U+4E00 | run 4/10 | sample 216/385"
+    },
+    {
+      "file": "000147.jpg",
+      "seconds": 50.972399753984064,
+      "label": "U+4E00 | run 4/10 | sample 234/385"
+    },
+    {
+      "file": "000148.jpg",
+      "seconds": 51.31362715293653,
+      "label": "U+4E00 | run 4/10 | sample 269/385"
+    },
+    {
+      "file": "000149.jpg",
+      "seconds": 51.78540096397046,
+      "label": "U+4E00 | run 4/10 | sample 305/385"
+    },
+    {
+      "file": "000150.jpg",
+      "seconds": 52.08810471196193,
+      "label": "U+4E00 | run 4/10 | sample 323/385"
+    },
+    {
+      "file": "000151.jpg",
+      "seconds": 52.50289265695028,
+      "label": "U+4E00 | run 4/10 | sample 359/385"
+    },
+    {
+      "file": "000152.jpg",
+      "seconds": 52.776656045927666,
+      "label": "U+4E00 | run 4/10 | sample 377/385"
+    },
+    {
+      "file": "000153.jpg",
+      "seconds": 53.03610598994419,
+      "label": "U+4E00 | run 4/10 | sample 385/385"
+    },
+    {
+      "file": "000154.jpg",
+      "seconds": 53.33645046502352,
+      "label": "U+4E00 | run 4/10 | sample 385/385"
+    },
+    {
+      "file": "000155.jpg",
+      "seconds": 53.605253516929224,
+      "label": "U+4E00 | run 4/10 | sample 385/385"
+    },
+    {
+      "file": "000156.jpg",
+      "seconds": 53.89269858400803,
+      "label": "U+4E00 | run 4/10 | sample 385/385"
+    },
+    {
+      "file": "000157.jpg",
+      "seconds": 54.21879475400783,
+      "label": "U+4E00 | run 4/10 | sample 385/385"
+    },
+    {
+      "file": "000158.jpg",
+      "seconds": 54.515181188005954,
+      "label": "U+4E00 | run 4/10 | sample 385/385"
+    },
+    {
+      "file": "000159.jpg",
+      "seconds": 54.78314065292943,
+      "label": "U+4E00 | run 4/10 | sample 385/385"
+    },
+    {
+      "file": "000160.jpg",
+      "seconds": 55.104462194023654,
+      "label": "U+4EBA | run 5/10 | sample 11/571"
+    },
+    {
+      "file": "000161.jpg",
+      "seconds": 55.444828993990086,
+      "label": "U+4EBA | run 5/10 | sample 45/571"
+    },
+    {
+      "file": "000162.jpg",
+      "seconds": 55.74105303292163,
+      "label": "U+4EBA | run 5/10 | sample 78/571"
+    },
+    {
+      "file": "000163.jpg",
+      "seconds": 56.01959696202539,
+      "label": "U+4EBA | run 5/10 | sample 96/571"
+    },
+    {
+      "file": "000164.jpg",
+      "seconds": 56.31880863092374,
+      "label": "U+4EBA | run 5/10 | sample 131/571"
+    },
+    {
+      "file": "000165.jpg",
+      "seconds": 56.63499217201024,
+      "label": "U+4EBA | run 5/10 | sample 166/571"
+    },
+    {
+      "file": "000166.jpg",
+      "seconds": 57.01887326093856,
+      "label": "U+4EBA | run 5/10 | sample 202/571"
+    },
+    {
+      "file": "000167.jpg",
+      "seconds": 57.42049430694897,
+      "label": "U+4EBA | run 5/10 | sample 238/571"
+    },
+    {
+      "file": "000168.jpg",
+      "seconds": 57.85106354393065,
+      "label": "U+4EBA | run 5/10 | sample 274/571"
+    },
+    {
+      "file": "000169.jpg",
+      "seconds": 58.26978454901837,
+      "label": "U+4EBA | run 5/10 | sample 310/571"
+    },
+    {
+      "file": "000170.jpg",
+      "seconds": 58.684541400987655,
+      "label": "U+4EBA | run 5/10 | sample 346/571"
+    },
+    {
+      "file": "000171.jpg",
+      "seconds": 58.935857792967,
+      "label": "U+4EBA | run 5/10 | sample 364/571"
+    },
+    {
+      "file": "000172.jpg",
+      "seconds": 59.19967194297351,
+      "label": "U+4EBA | run 5/10 | sample 382/571"
+    },
+    {
+      "file": "000173.jpg",
+      "seconds": 59.549025389016606,
+      "label": "U+4EBA | run 5/10 | sample 418/571"
+    },
+    {
+      "file": "000174.jpg",
+      "seconds": 59.9156174659729,
+      "label": "U+4EBA | run 5/10 | sample 436/571"
+    },
+    {
+      "file": "000175.jpg",
+      "seconds": 60.23953791393433,
+      "label": "U+4EBA | run 5/10 | sample 454/571"
+    },
+    {
+      "file": "000176.jpg",
+      "seconds": 60.56875005492475,
+      "label": "U+4EBA | run 5/10 | sample 472/571"
+    },
+    {
+      "file": "000177.jpg",
+      "seconds": 60.888146110926755,
+      "label": "U+4EBA | run 5/10 | sample 490/571"
+    },
+    {
+      "file": "000178.jpg",
+      "seconds": 61.38232578895986,
+      "label": "U+4EBA | run 5/10 | sample 526/571"
+    },
+    {
+      "file": "000179.jpg",
+      "seconds": 61.746895386022516,
+      "label": "U+4EBA | run 5/10 | sample 562/571"
+    },
+    {
+      "file": "000180.jpg",
+      "seconds": 62.00065716996323,
+      "label": "U+4EBA | run 5/10 | sample 571/571"
+    },
+    {
+      "file": "000181.jpg",
+      "seconds": 62.25934145599604,
+      "label": "U+4EBA | run 5/10 | sample 571/571"
+    },
+    {
+      "file": "000182.jpg",
+      "seconds": 62.48644163191784,
+      "label": "U+4EBA | run 5/10 | sample 571/571"
+    },
+    {
+      "file": "000183.jpg",
+      "seconds": 62.74092791392468,
+      "label": "U+4EBA | run 5/10 | sample 571/571"
+    },
+    {
+      "file": "000184.jpg",
+      "seconds": 63.01439318899065,
+      "label": "U+4EBA | run 5/10 | sample 571/571"
+    },
+    {
+      "file": "000185.jpg",
+      "seconds": 63.30988858593628,
+      "label": "U+4EBA | run 5/10 | sample 571/571"
+    },
+    {
+      "file": "000186.jpg",
+      "seconds": 63.58943992492277,
+      "label": "U+4EBA | run 5/10 | sample 571/571"
+    },
+    {
+      "file": "000187.jpg",
+      "seconds": 63.83300309802871,
+      "label": "U+4EBA | run 5/10 | sample 571/571"
+    },
+    {
+      "file": "000188.jpg",
+      "seconds": 64.1288680100115,
+      "label": "U+4EBA | run 6/10 | sample 18/618"
+    },
+    {
+      "file": "000189.jpg",
+      "seconds": 64.47632461600006,
+      "label": "U+4EBA | run 6/10 | sample 54/618"
+    },
+    {
+      "file": "000190.jpg",
+      "seconds": 64.90784771798644,
+      "label": "U+4EBA | run 6/10 | sample 90/618"
+    },
+    {
+      "file": "000191.jpg",
+      "seconds": 65.35449272301048,
+      "label": "U+4EBA | run 6/10 | sample 126/618"
+    },
+    {
+      "file": "000192.jpg",
+      "seconds": 65.70476993196644,
+      "label": "U+4EBA | run 6/10 | sample 162/618"
+    },
+    {
+      "file": "000193.jpg",
+      "seconds": 66.00200873694848,
+      "label": "U+4EBA | run 6/10 | sample 180/618"
+    },
+    {
+      "file": "000194.jpg",
+      "seconds": 66.27981780702248,
+      "label": "U+4EBA | run 6/10 | sample 198/618"
+    },
+    {
+      "file": "000195.jpg",
+      "seconds": 66.6534782149829,
+      "label": "U+4EBA | run 6/10 | sample 234/618"
+    },
+    {
+      "file": "000196.jpg",
+      "seconds": 67.09318603598513,
+      "label": "U+4EBA | run 6/10 | sample 270/618"
+    },
+    {
+      "file": "000197.jpg",
+      "seconds": 67.52326197503135,
+      "label": "U+4EBA | run 6/10 | sample 306/618"
+    },
+    {
+      "file": "000198.jpg",
+      "seconds": 67.8590004829457,
+      "label": "U+4EBA | run 6/10 | sample 342/618"
+    },
+    {
+      "file": "000199.jpg",
+      "seconds": 68.24801526695956,
+      "label": "U+4EBA | run 6/10 | sample 378/618"
+    },
+    {
+      "file": "000200.jpg",
+      "seconds": 68.63780574500561,
+      "label": "U+4EBA | run 6/10 | sample 409/618"
+    },
+    {
+      "file": "000201.jpg",
+      "seconds": 69.03418011195026,
+      "label": "U+4EBA | run 6/10 | sample 445/618"
+    },
+    {
+      "file": "000202.jpg",
+      "seconds": 69.47016511997208,
+      "label": "U+4EBA | run 6/10 | sample 481/618"
+    },
+    {
+      "file": "000203.jpg",
+      "seconds": 69.82517332700081,
+      "label": "U+4EBA | run 6/10 | sample 514/618"
+    },
+    {
+      "file": "000204.jpg",
+      "seconds": 70.17136690800544,
+      "label": "U+4EBA | run 6/10 | sample 532/618"
+    },
+    {
+      "file": "000205.jpg",
+      "seconds": 70.60046575497836,
+      "label": "U+4EBA | run 6/10 | sample 568/618"
+    },
+    {
+      "file": "000206.jpg",
+      "seconds": 70.91532847995404,
+      "label": "U+4EBA | run 6/10 | sample 586/618"
+    },
+    {
+      "file": "000207.jpg",
+      "seconds": 71.18307856097817,
+      "label": "U+4EBA | run 6/10 | sample 604/618"
+    },
+    {
+      "file": "000208.jpg",
+      "seconds": 71.48710545094218,
+      "label": "U+4EBA | run 6/10 | sample 618/618"
+    },
+    {
+      "file": "000209.jpg",
+      "seconds": 71.77115600393154,
+      "label": "U+4EBA | run 6/10 | sample 618/618"
+    },
+    {
+      "file": "000210.jpg",
+      "seconds": 72.0149981440045,
+      "label": "U+4EBA | run 6/10 | sample 618/618"
+    },
+    {
+      "file": "000211.jpg",
+      "seconds": 72.28721640794538,
+      "label": "U+4EBA | run 6/10 | sample 618/618"
+    },
+    {
+      "file": "000212.jpg",
+      "seconds": 72.57360284298193,
+      "label": "U+4EBA | run 6/10 | sample 618/618"
+    },
+    {
+      "file": "000213.jpg",
+      "seconds": 72.8942471059272,
+      "label": "U+4EBA | run 6/10 | sample 618/618"
+    },
+    {
+      "file": "000214.jpg",
+      "seconds": 73.16787727293558,
+      "label": "U+4EBA | run 6/10 | sample 618/618"
+    },
+    {
+      "file": "000215.jpg",
+      "seconds": 73.43963765900116,
+      "label": "U+6625 | run 7/10 | sample 5/2375"
+    },
+    {
+      "file": "000216.jpg",
+      "seconds": 73.77938324096613,
+      "label": "U+6625 | run 7/10 | sample 41/2375"
+    },
+    {
+      "file": "000217.jpg",
+      "seconds": 74.19339524197858,
+      "label": "U+6625 | run 7/10 | sample 59/2375"
+    },
+    {
+      "file": "000218.jpg",
+      "seconds": 74.69358185399324,
+      "label": "U+6625 | run 7/10 | sample 94/2375"
+    },
+    {
+      "file": "000219.jpg",
+      "seconds": 75.0789781139465,
+      "label": "U+6625 | run 7/10 | sample 130/2375"
+    },
+    {
+      "file": "000220.jpg",
+      "seconds": 75.42714259994682,
+      "label": "U+6625 | run 7/10 | sample 166/2375"
+    },
+    {
+      "file": "000221.jpg",
+      "seconds": 75.80524744093418,
+      "label": "U+6625 | run 7/10 | sample 202/2375"
+    },
+    {
+      "file": "000222.jpg",
+      "seconds": 76.14088604797143,
+      "label": "U+6625 | run 7/10 | sample 220/2375"
+    },
+    {
+      "file": "000223.jpg",
+      "seconds": 76.46914945694152,
+      "label": "U+6625 | run 7/10 | sample 238/2375"
+    },
+    {
+      "file": "000224.jpg",
+      "seconds": 76.74225174693856,
+      "label": "U+6625 | run 7/10 | sample 256/2375"
+    },
+    {
+      "file": "000225.jpg",
+      "seconds": 77.14249371597543,
+      "label": "U+6625 | run 7/10 | sample 292/2375"
+    },
+    {
+      "file": "000226.jpg",
+      "seconds": 77.46459911193233,
+      "label": "U+6625 | run 7/10 | sample 328/2375"
+    },
+    {
+      "file": "000227.jpg",
+      "seconds": 77.776575656957,
+      "label": "U+6625 | run 7/10 | sample 364/2375"
+    },
+    {
+      "file": "000228.jpg",
+      "seconds": 78.06955424393527,
+      "label": "U+6625 | run 7/10 | sample 400/2375"
+    },
+    {
+      "file": "000229.jpg",
+      "seconds": 78.42525065492373,
+      "label": "U+6625 | run 7/10 | sample 436/2375"
+    },
+    {
+      "file": "000230.jpg",
+      "seconds": 78.7778028449975,
+      "label": "U+6625 | run 7/10 | sample 472/2375"
+    },
+    {
+      "file": "000231.jpg",
+      "seconds": 79.08838934300002,
+      "label": "U+6625 | run 7/10 | sample 507/2375"
+    },
+    {
+      "file": "000232.jpg",
+      "seconds": 79.50494302297011,
+      "label": "U+6625 | run 7/10 | sample 543/2375"
+    },
+    {
+      "file": "000233.jpg",
+      "seconds": 79.81940131797455,
+      "label": "U+6625 | run 7/10 | sample 576/2375"
+    },
+    {
+      "file": "000234.jpg",
+      "seconds": 80.18025612202473,
+      "label": "U+6625 | run 7/10 | sample 594/2375"
+    },
+    {
+      "file": "000235.jpg",
+      "seconds": 80.55305624799803,
+      "label": "U+6625 | run 7/10 | sample 630/2375"
+    },
+    {
+      "file": "000236.jpg",
+      "seconds": 80.96158744895365,
+      "label": "U+6625 | run 7/10 | sample 666/2375"
+    },
+    {
+      "file": "000237.jpg",
+      "seconds": 81.34970854001585,
+      "label": "U+6625 | run 7/10 | sample 701/2375"
+    },
+    {
+      "file": "000238.jpg",
+      "seconds": 81.7208933159709,
+      "label": "U+6625 | run 7/10 | sample 737/2375"
+    },
+    {
+      "file": "000239.jpg",
+      "seconds": 82.05246879300103,
+      "label": "U+6625 | run 7/10 | sample 755/2375"
+    },
+    {
+      "file": "000240.jpg",
+      "seconds": 82.4954245799454,
+      "label": "U+6625 | run 7/10 | sample 791/2375"
+    },
+    {
+      "file": "000241.jpg",
+      "seconds": 82.92416047398001,
+      "label": "U+6625 | run 7/10 | sample 827/2375"
+    },
+    {
+      "file": "000242.jpg",
+      "seconds": 83.29823356599081,
+      "label": "U+6625 | run 7/10 | sample 845/2375"
+    },
+    {
+      "file": "000243.jpg",
+      "seconds": 83.76308393292129,
+      "label": "U+6625 | run 7/10 | sample 881/2375"
+    },
+    {
+      "file": "000244.jpg",
+      "seconds": 84.09536817693152,
+      "label": "U+6625 | run 7/10 | sample 899/2375"
+    },
+    {
+      "file": "000245.jpg",
+      "seconds": 84.38676341797691,
+      "label": "U+6625 | run 7/10 | sample 917/2375"
+    },
+    {
+      "file": "000246.jpg",
+      "seconds": 84.70742261002306,
+      "label": "U+6625 | run 7/10 | sample 953/2375"
+    },
+    {
+      "file": "000247.jpg",
+      "seconds": 85.04737412801478,
+      "label": "U+6625 | run 7/10 | sample 989/2375"
+    },
+    {
+      "file": "000248.jpg",
+      "seconds": 85.32503744203132,
+      "label": "U+6625 | run 7/10 | sample 1007/2375"
+    },
+    {
+      "file": "000249.jpg",
+      "seconds": 85.668292377959,
+      "label": "U+6625 | run 7/10 | sample 1025/2375"
+    },
+    {
+      "file": "000250.jpg",
+      "seconds": 86.05836045392789,
+      "label": "U+6625 | run 7/10 | sample 1061/2375"
+    },
+    {
+      "file": "000251.jpg",
+      "seconds": 86.40311484097037,
+      "label": "U+6625 | run 7/10 | sample 1097/2375"
+    },
+    {
+      "file": "000252.jpg",
+      "seconds": 86.809783577919,
+      "label": "U+6625 | run 7/10 | sample 1133/2375"
+    },
+    {
+      "file": "000253.jpg",
+      "seconds": 87.11033444094937,
+      "label": "U+6625 | run 7/10 | sample 1151/2375"
+    },
+    {
+      "file": "000254.jpg",
+      "seconds": 87.4860423959326,
+      "label": "U+6625 | run 7/10 | sample 1187/2375"
+    },
+    {
+      "file": "000255.jpg",
+      "seconds": 87.84456508595031,
+      "label": "U+6625 | run 7/10 | sample 1223/2375"
+    },
+    {
+      "file": "000256.jpg",
+      "seconds": 88.16451421997044,
+      "label": "U+6625 | run 7/10 | sample 1257/2375"
+    },
+    {
+      "file": "000257.jpg",
+      "seconds": 88.45889687992167,
+      "label": "U+6625 | run 7/10 | sample 1275/2375"
+    },
+    {
+      "file": "000258.jpg",
+      "seconds": 88.87852160201874,
+      "label": "U+6625 | run 7/10 | sample 1311/2375"
+    },
+    {
+      "file": "000259.jpg",
+      "seconds": 89.22787062998395,
+      "label": "U+6625 | run 7/10 | sample 1345/2375"
+    },
+    {
+      "file": "000260.jpg",
+      "seconds": 89.56504889694043,
+      "label": "U+6625 | run 7/10 | sample 1363/2375"
+    },
+    {
+      "file": "000261.jpg",
+      "seconds": 89.85390819201712,
+      "label": "U+6625 | run 7/10 | sample 1381/2375"
+    },
+    {
+      "file": "000262.jpg",
+      "seconds": 90.17616019002162,
+      "label": "U+6625 | run 7/10 | sample 1417/2375"
+    },
+    {
+      "file": "000263.jpg",
+      "seconds": 90.4836982350098,
+      "label": "U+6625 | run 7/10 | sample 1453/2375"
+    },
+    {
+      "file": "000264.jpg",
+      "seconds": 90.8047265659552,
+      "label": "U+6625 | run 7/10 | sample 1486/2375"
+    },
+    {
+      "file": "000265.jpg",
+      "seconds": 91.12574664293788,
+      "label": "U+6625 | run 7/10 | sample 1522/2375"
+    },
+    {
+      "file": "000266.jpg",
+      "seconds": 91.46551938692573,
+      "label": "U+6625 | run 7/10 | sample 1540/2375"
+    },
+    {
+      "file": "000267.jpg",
+      "seconds": 91.86119655193761,
+      "label": "U+6625 | run 7/10 | sample 1576/2375"
+    },
+    {
+      "file": "000268.jpg",
+      "seconds": 92.2163158080075,
+      "label": "U+6625 | run 7/10 | sample 1594/2375"
+    },
+    {
+      "file": "000269.jpg",
+      "seconds": 92.5297355609946,
+      "label": "U+6625 | run 7/10 | sample 1629/2375"
+    },
+    {
+      "file": "000270.jpg",
+      "seconds": 92.83676705195103,
+      "label": "U+6625 | run 7/10 | sample 1647/2375"
+    },
+    {
+      "file": "000271.jpg",
+      "seconds": 93.14764411293436,
+      "label": "U+6625 | run 7/10 | sample 1680/2375"
+    },
+    {
+      "file": "000272.jpg",
+      "seconds": 93.5147043709876,
+      "label": "U+6625 | run 7/10 | sample 1716/2375"
+    },
+    {
+      "file": "000273.jpg",
+      "seconds": 93.89920171792619,
+      "label": "U+6625 | run 7/10 | sample 1752/2375"
+    },
+    {
+      "file": "000274.jpg",
+      "seconds": 94.19144429801963,
+      "label": "U+6625 | run 7/10 | sample 1770/2375"
+    },
+    {
+      "file": "000275.jpg",
+      "seconds": 94.51899293099996,
+      "label": "U+6625 | run 7/10 | sample 1802/2375"
+    },
+    {
+      "file": "000276.jpg",
+      "seconds": 94.89324258302804,
+      "label": "U+6625 | run 7/10 | sample 1838/2375"
+    },
+    {
+      "file": "000277.jpg",
+      "seconds": 95.24100471602287,
+      "label": "U+6625 | run 7/10 | sample 1874/2375"
+    },
+    {
+      "file": "000278.jpg",
+      "seconds": 95.64458672702312,
+      "label": "U+6625 | run 7/10 | sample 1910/2375"
+    },
+    {
+      "file": "000279.jpg",
+      "seconds": 96.01137526892126,
+      "label": "U+6625 | run 7/10 | sample 1946/2375"
+    },
+    {
+      "file": "000280.jpg",
+      "seconds": 96.3773633169476,
+      "label": "U+6625 | run 7/10 | sample 1982/2375"
+    },
+    {
+      "file": "000281.jpg",
+      "seconds": 96.70097250200342,
+      "label": "U+6625 | run 7/10 | sample 2018/2375"
+    },
+    {
+      "file": "000282.jpg",
+      "seconds": 97.18757432501297,
+      "label": "U+6625 | run 7/10 | sample 2054/2375"
+    },
+    {
+      "file": "000283.jpg",
+      "seconds": 97.61858577502426,
+      "label": "U+6625 | run 7/10 | sample 2090/2375"
+    },
+    {
+      "file": "000284.jpg",
+      "seconds": 98.03328245098237,
+      "label": "U+6625 | run 7/10 | sample 2126/2375"
+    },
+    {
+      "file": "000285.jpg",
+      "seconds": 98.45160139992367,
+      "label": "U+6625 | run 7/10 | sample 2161/2375"
+    },
+    {
+      "file": "000286.jpg",
+      "seconds": 98.76560540194623,
+      "label": "U+6625 | run 7/10 | sample 2197/2375"
+    },
+    {
+      "file": "000287.jpg",
+      "seconds": 99.08545436698478,
+      "label": "U+6625 | run 7/10 | sample 2233/2375"
+    },
+    {
+      "file": "000288.jpg",
+      "seconds": 99.39616100699641,
+      "label": "U+6625 | run 7/10 | sample 2267/2375"
+    },
+    {
+      "file": "000289.jpg",
+      "seconds": 99.7062395910034,
+      "label": "U+6625 | run 7/10 | sample 2303/2375"
+    },
+    {
+      "file": "000290.jpg",
+      "seconds": 100.1274047269253,
+      "label": "U+6625 | run 7/10 | sample 2338/2375"
+    },
+    {
+      "file": "000291.jpg",
+      "seconds": 100.3995974449208,
+      "label": "U+6625 | run 7/10 | sample 2372/2375"
+    },
+    {
+      "file": "000292.jpg",
+      "seconds": 100.65459870395716,
+      "label": "U+6625 | run 7/10 | sample 2375/2375"
+    },
+    {
+      "file": "000293.jpg",
+      "seconds": 100.94740279193502,
+      "label": "U+6625 | run 7/10 | sample 2375/2375"
+    },
+    {
+      "file": "000294.jpg",
+      "seconds": 101.20228379499167,
+      "label": "U+6625 | run 7/10 | sample 2375/2375"
+    },
+    {
+      "file": "000295.jpg",
+      "seconds": 101.46055784099735,
+      "label": "U+6625 | run 7/10 | sample 2375/2375"
+    },
+    {
+      "file": "000296.jpg",
+      "seconds": 101.71814575302415,
+      "label": "U+6625 | run 7/10 | sample 2375/2375"
+    },
+    {
+      "file": "000297.jpg",
+      "seconds": 102.02802765392698,
+      "label": "U+6625 | run 7/10 | sample 2375/2375"
+    },
+    {
+      "file": "000298.jpg",
+      "seconds": 102.29038445698097,
+      "label": "U+6625 | run 7/10 | sample 2375/2375"
+    },
+    {
+      "file": "000299.jpg",
+      "seconds": 102.67924540594686,
+      "label": "U+6C5F | run 8/10 | sample 3/1268"
+    },
+    {
+      "file": "000300.jpg",
+      "seconds": 103.05074655695353,
+      "label": "U+6C5F | run 8/10 | sample 39/1268"
+    },
+    {
+      "file": "000301.jpg",
+      "seconds": 103.33062135800719,
+      "label": "U+6C5F | run 8/10 | sample 57/1268"
+    },
+    {
+      "file": "000302.jpg",
+      "seconds": 103.62801499897614,
+      "label": "U+6C5F | run 8/10 | sample 93/1268"
+    },
+    {
+      "file": "000303.jpg",
+      "seconds": 103.94702343991958,
+      "label": "U+6C5F | run 8/10 | sample 132/1268"
+    },
+    {
+      "file": "000304.jpg",
+      "seconds": 104.27319674601313,
+      "label": "U+6C5F | run 8/10 | sample 168/1268"
+    },
+    {
+      "file": "000305.jpg",
+      "seconds": 104.69270301994402,
+      "label": "U+6C5F | run 8/10 | sample 203/1268"
+    },
+    {
+      "file": "000306.jpg",
+      "seconds": 104.99246058694553,
+      "label": "U+6C5F | run 8/10 | sample 235/1268"
+    },
+    {
+      "file": "000307.jpg",
+      "seconds": 105.28100556798745,
+      "label": "U+6C5F | run 8/10 | sample 253/1268"
+    },
+    {
+      "file": "000308.jpg",
+      "seconds": 105.65296484902501,
+      "label": "U+6C5F | run 8/10 | sample 289/1268"
+    },
+    {
+      "file": "000309.jpg",
+      "seconds": 106.04853426897898,
+      "label": "U+6C5F | run 8/10 | sample 325/1268"
+    },
+    {
+      "file": "000310.jpg",
+      "seconds": 106.49113504495472,
+      "label": "U+6C5F | run 8/10 | sample 361/1268"
+    },
+    {
+      "file": "000311.jpg",
+      "seconds": 106.83024580497295,
+      "label": "U+6C5F | run 8/10 | sample 379/1268"
+    },
+    {
+      "file": "000312.jpg",
+      "seconds": 107.15774424397387,
+      "label": "U+6C5F | run 8/10 | sample 415/1268"
+    },
+    {
+      "file": "000313.jpg",
+      "seconds": 107.4197322819382,
+      "label": "U+6C5F | run 8/10 | sample 433/1268"
+    },
+    {
+      "file": "000314.jpg",
+      "seconds": 107.8002907729242,
+      "label": "U+6C5F | run 8/10 | sample 469/1268"
+    },
+    {
+      "file": "000315.jpg",
+      "seconds": 108.26735595194623,
+      "label": "U+6C5F | run 8/10 | sample 505/1268"
+    },
+    {
+      "file": "000316.jpg",
+      "seconds": 108.63846082799137,
+      "label": "U+6C5F | run 8/10 | sample 539/1268"
+    },
+    {
+      "file": "000317.jpg",
+      "seconds": 109.01697530702222,
+      "label": "U+6C5F | run 8/10 | sample 557/1268"
+    },
+    {
+      "file": "000318.jpg",
+      "seconds": 109.39882064901758,
+      "label": "U+6C5F | run 8/10 | sample 575/1268"
+    },
+    {
+      "file": "000319.jpg",
+      "seconds": 109.8288639630191,
+      "label": "U+6C5F | run 8/10 | sample 611/1268"
+    },
+    {
+      "file": "000320.jpg",
+      "seconds": 110.2393675709609,
+      "label": "U+6C5F | run 8/10 | sample 647/1268"
+    },
+    {
+      "file": "000321.jpg",
+      "seconds": 110.49917700397782,
+      "label": "U+6C5F | run 8/10 | sample 665/1268"
+    },
+    {
+      "file": "000322.jpg",
+      "seconds": 110.82459274097346,
+      "label": "U+6C5F | run 8/10 | sample 683/1268"
+    },
+    {
+      "file": "000323.jpg",
+      "seconds": 111.28349400393199,
+      "label": "U+6C5F | run 8/10 | sample 701/1268"
+    },
+    {
+      "file": "000324.jpg",
+      "seconds": 111.7166145920055,
+      "label": "U+6C5F | run 8/10 | sample 719/1268"
+    },
+    {
+      "file": "000325.jpg",
+      "seconds": 112.02999185398221,
+      "label": "U+6C5F | run 8/10 | sample 737/1268"
+    },
+    {
+      "file": "000326.jpg",
+      "seconds": 112.39838292798959,
+      "label": "U+6C5F | run 8/10 | sample 755/1268"
+    },
+    {
+      "file": "000327.jpg",
+      "seconds": 112.75219663395546,
+      "label": "U+6C5F | run 8/10 | sample 773/1268"
+    },
+    {
+      "file": "000328.jpg",
+      "seconds": 113.08398702403065,
+      "label": "U+6C5F | run 8/10 | sample 809/1268"
+    },
+    {
+      "file": "000329.jpg",
+      "seconds": 113.42862889298704,
+      "label": "U+6C5F | run 8/10 | sample 845/1268"
+    },
+    {
+      "file": "000330.jpg",
+      "seconds": 113.80193851899821,
+      "label": "U+6C5F | run 8/10 | sample 863/1268"
+    },
+    {
+      "file": "000331.jpg",
+      "seconds": 114.22563946992159,
+      "label": "U+6C5F | run 8/10 | sample 899/1268"
+    },
+    {
+      "file": "000332.jpg",
+      "seconds": 114.57863630901556,
+      "label": "U+6C5F | run 8/10 | sample 935/1268"
+    },
+    {
+      "file": "000333.jpg",
+      "seconds": 114.92323201498948,
+      "label": "U+6C5F | run 8/10 | sample 971/1268"
+    },
+    {
+      "file": "000334.jpg",
+      "seconds": 115.26790368894581,
+      "label": "U+6C5F | run 8/10 | sample 989/1268"
+    },
+    {
+      "file": "000335.jpg",
+      "seconds": 115.5401242049411,
+      "label": "U+6C5F | run 8/10 | sample 1007/1268"
+    },
+    {
+      "file": "000336.jpg",
+      "seconds": 115.90713825100102,
+      "label": "U+6C5F | run 8/10 | sample 1025/1268"
+    },
+    {
+      "file": "000337.jpg",
+      "seconds": 116.28869725600816,
+      "label": "U+6C5F | run 8/10 | sample 1043/1268"
+    },
+    {
+      "file": "000338.jpg",
+      "seconds": 116.6390936790267,
+      "label": "U+6C5F | run 8/10 | sample 1061/1268"
+    },
+    {
+      "file": "000339.jpg",
+      "seconds": 116.90021835896187,
+      "label": "U+6C5F | run 8/10 | sample 1079/1268"
+    },
+    {
+      "file": "000340.jpg",
+      "seconds": 117.20061771699693,
+      "label": "U+6C5F | run 8/10 | sample 1115/1268"
+    },
+    {
+      "file": "000341.jpg",
+      "seconds": 117.52888495801017,
+      "label": "U+6C5F | run 8/10 | sample 1151/1268"
+    },
+    {
+      "file": "000342.jpg",
+      "seconds": 117.9537236399483,
+      "label": "U+6C5F | run 8/10 | sample 1187/1268"
+    },
+    {
+      "file": "000343.jpg",
+      "seconds": 118.25368408998474,
+      "label": "U+6C5F | run 8/10 | sample 1205/1268"
+    },
+    {
+      "file": "000344.jpg",
+      "seconds": 118.7939984620316,
+      "label": "U+6C5F | run 8/10 | sample 1241/1268"
+    },
+    {
+      "file": "000345.jpg",
+      "seconds": 119.07116473198403,
+      "label": "U+6C5F | run 8/10 | sample 1259/1268"
+    },
+    {
+      "file": "000346.jpg",
+      "seconds": 119.40716904494911,
+      "label": "U+6C5F | run 8/10 | sample 1268/1268"
+    },
+    {
+      "file": "000347.jpg",
+      "seconds": 119.72751039592549,
+      "label": "U+6C5F | run 8/10 | sample 1268/1268"
+    },
+    {
+      "file": "000348.jpg",
+      "seconds": 120.11278171499725,
+      "label": "U+6C5F | run 8/10 | sample 1268/1268"
+    },
+    {
+      "file": "000349.jpg",
+      "seconds": 120.3535747010028,
+      "label": "U+6C5F | run 8/10 | sample 1268/1268"
+    },
+    {
+      "file": "000350.jpg",
+      "seconds": 120.58923201891594,
+      "label": "U+6C5F | run 8/10 | sample 1268/1268"
+    },
+    {
+      "file": "000351.jpg",
+      "seconds": 120.8539004449267,
+      "label": "U+6C5F | run 8/10 | sample 1268/1268"
+    },
+    {
+      "file": "000352.jpg",
+      "seconds": 121.11215224897023,
+      "label": "U+6C5F | run 8/10 | sample 1268/1268"
+    },
+    {
+      "file": "000353.jpg",
+      "seconds": 121.4143271719804,
+      "label": "U+6708 | run 9/10 | sample 4/1276"
+    },
+    {
+      "file": "000354.jpg",
+      "seconds": 121.73327996500302,
+      "label": "U+6708 | run 9/10 | sample 22/1276"
+    },
+    {
+      "file": "000355.jpg",
+      "seconds": 122.0080499559408,
+      "label": "U+6708 | run 9/10 | sample 57/1276"
+    },
+    {
+      "file": "000356.jpg",
+      "seconds": 122.34316378901713,
+      "label": "U+6708 | run 9/10 | sample 75/1276"
+    },
+    {
+      "file": "000357.jpg",
+      "seconds": 122.63388927001506,
+      "label": "U+6708 | run 9/10 | sample 93/1276"
+    },
+    {
+      "file": "000358.jpg",
+      "seconds": 122.96803245693445,
+      "label": "U+6708 | run 9/10 | sample 111/1276"
+    },
+    {
+      "file": "000359.jpg",
+      "seconds": 123.41834322502837,
+      "label": "U+6708 | run 9/10 | sample 145/1276"
+    },
+    {
+      "file": "000360.jpg",
+      "seconds": 123.7597128340276,
+      "label": "U+6708 | run 9/10 | sample 163/1276"
+    },
+    {
+      "file": "000361.jpg",
+      "seconds": 124.16893156291917,
+      "label": "U+6708 | run 9/10 | sample 181/1276"
+    },
+    {
+      "file": "000362.jpg",
+      "seconds": 124.50868235796224,
+      "label": "U+6708 | run 9/10 | sample 199/1276"
+    },
+    {
+      "file": "000363.jpg",
+      "seconds": 124.87615872302558,
+      "label": "U+6708 | run 9/10 | sample 217/1276"
+    },
+    {
+      "file": "000364.jpg",
+      "seconds": 125.33369125099853,
+      "label": "U+6708 | run 9/10 | sample 235/1276"
+    },
+    {
+      "file": "000365.jpg",
+      "seconds": 125.61242098093498,
+      "label": "U+6708 | run 9/10 | sample 253/1276"
+    },
+    {
+      "file": "000366.jpg",
+      "seconds": 126.2382156800013,
+      "label": "U+6708 | run 9/10 | sample 289/1276"
+    },
+    {
+      "file": "000367.jpg",
+      "seconds": 126.545332724927,
+      "label": "U+6708 | run 9/10 | sample 307/1276"
+    },
+    {
+      "file": "000368.jpg",
+      "seconds": 126.91689712798689,
+      "label": "U+6708 | run 9/10 | sample 343/1276"
+    },
+    {
+      "file": "000369.jpg",
+      "seconds": 127.30347157700453,
+      "label": "U+6708 | run 9/10 | sample 379/1276"
+    },
+    {
+      "file": "000370.jpg",
+      "seconds": 127.76450601394754,
+      "label": "U+6708 | run 9/10 | sample 414/1276"
+    },
+    {
+      "file": "000371.jpg",
+      "seconds": 128.04744367394596,
+      "label": "U+6708 | run 9/10 | sample 432/1276"
+    },
+    {
+      "file": "000372.jpg",
+      "seconds": 128.36731273692567,
+      "label": "U+6708 | run 9/10 | sample 468/1276"
+    },
+    {
+      "file": "000373.jpg",
+      "seconds": 128.71524243801832,
+      "label": "U+6708 | run 9/10 | sample 504/1276"
+    },
+    {
+      "file": "000374.jpg",
+      "seconds": 129.0308993839426,
+      "label": "U+6708 | run 9/10 | sample 540/1276"
+    },
+    {
+      "file": "000375.jpg",
+      "seconds": 129.39366018795408,
+      "label": "U+6708 | run 9/10 | sample 575/1276"
+    },
+    {
+      "file": "000376.jpg",
+      "seconds": 129.81661662401166,
+      "label": "U+6708 | run 9/10 | sample 611/1276"
+    },
+    {
+      "file": "000377.jpg",
+      "seconds": 130.17016666696873,
+      "label": "U+6708 | run 9/10 | sample 647/1276"
+    },
+    {
+      "file": "000378.jpg",
+      "seconds": 130.53483763092663,
+      "label": "U+6708 | run 9/10 | sample 681/1276"
+    },
+    {
+      "file": "000379.jpg",
+      "seconds": 130.786840540939,
+      "label": "U+6708 | run 9/10 | sample 699/1276"
+    },
+    {
+      "file": "000380.jpg",
+      "seconds": 131.18354759702925,
+      "label": "U+6708 | run 9/10 | sample 730/1276"
+    },
+    {
+      "file": "000381.jpg",
+      "seconds": 131.5099765799241,
+      "label": "U+6708 | run 9/10 | sample 766/1276"
+    },
+    {
+      "file": "000382.jpg",
+      "seconds": 131.8242475859588,
+      "label": "U+6708 | run 9/10 | sample 802/1276"
+    },
+    {
+      "file": "000383.jpg",
+      "seconds": 132.20442855393048,
+      "label": "U+6708 | run 9/10 | sample 838/1276"
+    },
+    {
+      "file": "000384.jpg",
+      "seconds": 132.59827798896004,
+      "label": "U+6708 | run 9/10 | sample 874/1276"
+    },
+    {
+      "file": "000385.jpg",
+      "seconds": 132.9415582929505,
+      "label": "U+6708 | run 9/10 | sample 892/1276"
+    },
+    {
+      "file": "000386.jpg",
+      "seconds": 133.18101032392588,
+      "label": "U+6708 | run 9/10 | sample 910/1276"
+    },
+    {
+      "file": "000387.jpg",
+      "seconds": 133.522403912968,
+      "label": "U+6708 | run 9/10 | sample 946/1276"
+    },
+    {
+      "file": "000388.jpg",
+      "seconds": 133.92997670499608,
+      "label": "U+6708 | run 9/10 | sample 982/1276"
+    },
+    {
+      "file": "000389.jpg",
+      "seconds": 134.2005862989463,
+      "label": "U+6708 | run 9/10 | sample 1000/1276"
+    },
+    {
+      "file": "000390.jpg",
+      "seconds": 134.54903852602,
+      "label": "U+6708 | run 9/10 | sample 1036/1276"
+    },
+    {
+      "file": "000391.jpg",
+      "seconds": 134.8245482989587,
+      "label": "U+6708 | run 9/10 | sample 1069/1276"
+    },
+    {
+      "file": "000392.jpg",
+      "seconds": 135.10288247896824,
+      "label": "U+6708 | run 9/10 | sample 1103/1276"
+    },
+    {
+      "file": "000393.jpg",
+      "seconds": 135.35586746002082,
+      "label": "U+6708 | run 9/10 | sample 1138/1276"
+    },
+    {
+      "file": "000394.jpg",
+      "seconds": 135.63196646398865,
+      "label": "U+6708 | run 9/10 | sample 1172/1276"
+    },
+    {
+      "file": "000395.jpg",
+      "seconds": 135.9277398539707,
+      "label": "U+6708 | run 9/10 | sample 1207/1276"
+    },
+    {
+      "file": "000396.jpg",
+      "seconds": 136.22828923002817,
+      "label": "U+6708 | run 9/10 | sample 1242/1276"
+    },
+    {
+      "file": "000397.jpg",
+      "seconds": 136.60911145899445,
+      "label": "U+6708 | run 9/10 | sample 1276/1276"
+    },
+    {
+      "file": "000398.jpg",
+      "seconds": 136.90448856994044,
+      "label": "U+6708 | run 9/10 | sample 1276/1276"
+    },
+    {
+      "file": "000399.jpg",
+      "seconds": 137.17460411193315,
+      "label": "U+6708 | run 9/10 | sample 1276/1276"
+    },
+    {
+      "file": "000400.jpg",
+      "seconds": 137.45993010199163,
+      "label": "U+6708 | run 9/10 | sample 1276/1276"
+    },
+    {
+      "file": "000401.jpg",
+      "seconds": 137.69386192096863,
+      "label": "U+6708 | run 9/10 | sample 1276/1276"
+    },
+    {
+      "file": "000402.jpg",
+      "seconds": 137.96488301292993,
+      "label": "U+6708 | run 9/10 | sample 1276/1276"
+    },
+    {
+      "file": "000403.jpg",
+      "seconds": 138.21083844697569,
+      "label": "U+6708 | run 9/10 | sample 1276/1276"
+    },
+    {
+      "file": "000404.jpg",
+      "seconds": 138.502798823989,
+      "label": "U+6708 | run 9/10 | sample 1276/1276"
+    },
+    {
+      "file": "000405.jpg",
+      "seconds": 138.76757578796241,
+      "label": "U+591C | run 10/10 | sample 35/1839"
+    },
+    {
+      "file": "000406.jpg",
+      "seconds": 139.02643619594164,
+      "label": "U+591C | run 10/10 | sample 68/1839"
+    },
+    {
+      "file": "000407.jpg",
+      "seconds": 139.2637705130037,
+      "label": "U+591C | run 10/10 | sample 100/1839"
+    },
+    {
+      "file": "000408.jpg",
+      "seconds": 139.53129005699884,
+      "label": "U+591C | run 10/10 | sample 136/1839"
+    },
+    {
+      "file": "000409.jpg",
+      "seconds": 139.8544836519286,
+      "label": "U+591C | run 10/10 | sample 172/1839"
+    },
+    {
+      "file": "000410.jpg",
+      "seconds": 140.14675245492253,
+      "label": "U+591C | run 10/10 | sample 206/1839"
+    },
+    {
+      "file": "000411.jpg",
+      "seconds": 140.45080395892728,
+      "label": "U+591C | run 10/10 | sample 239/1839"
+    },
+    {
+      "file": "000412.jpg",
+      "seconds": 140.71611200994812,
+      "label": "U+591C | run 10/10 | sample 272/1839"
+    },
+    {
+      "file": "000413.jpg",
+      "seconds": 141.05057751201093,
+      "label": "U+591C | run 10/10 | sample 308/1839"
+    },
+    {
+      "file": "000414.jpg",
+      "seconds": 141.48162793694064,
+      "label": "U+591C | run 10/10 | sample 344/1839"
+    },
+    {
+      "file": "000415.jpg",
+      "seconds": 141.8865683999611,
+      "label": "U+591C | run 10/10 | sample 380/1839"
+    },
+    {
+      "file": "000416.jpg",
+      "seconds": 142.23666554200463,
+      "label": "U+591C | run 10/10 | sample 416/1839"
+    },
+    {
+      "file": "000417.jpg",
+      "seconds": 142.55460128095,
+      "label": "U+591C | run 10/10 | sample 434/1839"
+    },
+    {
+      "file": "000418.jpg",
+      "seconds": 142.8206011399161,
+      "label": "U+591C | run 10/10 | sample 472/1839"
+    },
+    {
+      "file": "000419.jpg",
+      "seconds": 143.14955164096318,
+      "label": "U+591C | run 10/10 | sample 508/1839"
+    },
+    {
+      "file": "000420.jpg",
+      "seconds": 143.43429598899093,
+      "label": "U+591C | run 10/10 | sample 539/1839"
+    },
+    {
+      "file": "000421.jpg",
+      "seconds": 143.72379647998605,
+      "label": "U+591C | run 10/10 | sample 557/1839"
+    },
+    {
+      "file": "000422.jpg",
+      "seconds": 144.03488850593567,
+      "label": "U+591C | run 10/10 | sample 575/1839"
+    },
+    {
+      "file": "000423.jpg",
+      "seconds": 144.39395533700008,
+      "label": "U+591C | run 10/10 | sample 593/1839"
+    },
+    {
+      "file": "000424.jpg",
+      "seconds": 144.74866165500134,
+      "label": "U+591C | run 10/10 | sample 611/1839"
+    },
+    {
+      "file": "000425.jpg",
+      "seconds": 145.19025746698026,
+      "label": "U+591C | run 10/10 | sample 647/1839"
+    },
+    {
+      "file": "000426.jpg",
+      "seconds": 145.70694950898178,
+      "label": "U+591C | run 10/10 | sample 683/1839"
+    },
+    {
+      "file": "000427.jpg",
+      "seconds": 145.96324702491984,
+      "label": "U+591C | run 10/10 | sample 701/1839"
+    },
+    {
+      "file": "000428.jpg",
+      "seconds": 146.29625744000077,
+      "label": "U+591C | run 10/10 | sample 719/1839"
+    },
+    {
+      "file": "000429.jpg",
+      "seconds": 146.6863615299808,
+      "label": "U+591C | run 10/10 | sample 755/1839"
+    },
+    {
+      "file": "000430.jpg",
+      "seconds": 147.000949201989,
+      "label": "U+591C | run 10/10 | sample 790/1839"
+    },
+    {
+      "file": "000431.jpg",
+      "seconds": 147.32718449097592,
+      "label": "U+591C | run 10/10 | sample 823/1839"
+    },
+    {
+      "file": "000432.jpg",
+      "seconds": 147.78871908201836,
+      "label": "U+591C | run 10/10 | sample 859/1839"
+    },
+    {
+      "file": "000433.jpg",
+      "seconds": 148.13884982699528,
+      "label": "U+591C | run 10/10 | sample 877/1839"
+    },
+    {
+      "file": "000434.jpg",
+      "seconds": 148.50297128292732,
+      "label": "U+591C | run 10/10 | sample 913/1839"
+    },
+    {
+      "file": "000435.jpg",
+      "seconds": 148.7923417709535,
+      "label": "U+591C | run 10/10 | sample 931/1839"
+    },
+    {
+      "file": "000436.jpg",
+      "seconds": 149.27751963795163,
+      "label": "U+591C | run 10/10 | sample 967/1839"
+    },
+    {
+      "file": "000437.jpg",
+      "seconds": 149.62158964702394,
+      "label": "U+591C | run 10/10 | sample 1003/1839"
+    },
+    {
+      "file": "000438.jpg",
+      "seconds": 149.96632796595804,
+      "label": "U+591C | run 10/10 | sample 1038/1839"
+    },
+    {
+      "file": "000439.jpg",
+      "seconds": 150.3684071910102,
+      "label": "U+591C | run 10/10 | sample 1074/1839"
+    },
+    {
+      "file": "000440.jpg",
+      "seconds": 150.67953364399727,
+      "label": "U+591C | run 10/10 | sample 1110/1839"
+    },
+    {
+      "file": "000441.jpg",
+      "seconds": 151.11740890797228,
+      "label": "U+591C | run 10/10 | sample 1146/1839"
+    },
+    {
+      "file": "000442.jpg",
+      "seconds": 151.44522839400452,
+      "label": "U+591C | run 10/10 | sample 1180/1839"
+    },
+    {
+      "file": "000443.jpg",
+      "seconds": 151.77523164998274,
+      "label": "U+591C | run 10/10 | sample 1215/1839"
+    },
+    {
+      "file": "000444.jpg",
+      "seconds": 152.1461314029293,
+      "label": "U+591C | run 10/10 | sample 1251/1839"
+    },
+    {
+      "file": "000445.jpg",
+      "seconds": 152.54116076102946,
+      "label": "U+591C | run 10/10 | sample 1287/1839"
+    },
+    {
+      "file": "000446.jpg",
+      "seconds": 152.85673894896172,
+      "label": "U+591C | run 10/10 | sample 1323/1839"
+    },
+    {
+      "file": "000447.jpg",
+      "seconds": 153.24638199899346,
+      "label": "U+591C | run 10/10 | sample 1359/1839"
+    },
+    {
+      "file": "000448.jpg",
+      "seconds": 153.6575710979523,
+      "label": "U+591C | run 10/10 | sample 1395/1839"
+    },
+    {
+      "file": "000449.jpg",
+      "seconds": 153.98302041296847,
+      "label": "U+591C | run 10/10 | sample 1431/1839"
+    },
+    {
+      "file": "000450.jpg",
+      "seconds": 154.40433048992418,
+      "label": "U+591C | run 10/10 | sample 1476/1839"
+    },
+    {
+      "file": "000451.jpg",
+      "seconds": 154.73983482993208,
+      "label": "U+591C | run 10/10 | sample 1512/1839"
+    },
+    {
+      "file": "000452.jpg",
+      "seconds": 155.0205878309207,
+      "label": "U+591C | run 10/10 | sample 1530/1839"
+    },
+    {
+      "file": "000453.jpg",
+      "seconds": 155.37431334191933,
+      "label": "U+591C | run 10/10 | sample 1562/1839"
+    },
+    {
+      "file": "000454.jpg",
+      "seconds": 155.6809710370144,
+      "label": "U+591C | run 10/10 | sample 1598/1839"
+    },
+    {
+      "file": "000455.jpg",
+      "seconds": 156.01448294101283,
+      "label": "U+591C | run 10/10 | sample 1634/1839"
+    },
+    {
+      "file": "000456.jpg",
+      "seconds": 156.37685366696678,
+      "label": "U+591C | run 10/10 | sample 1670/1839"
+    },
+    {
+      "file": "000457.jpg",
+      "seconds": 156.68112390302122,
+      "label": "U+591C | run 10/10 | sample 1706/1839"
+    },
+    {
+      "file": "000458.jpg",
+      "seconds": 157.06728919397574,
+      "label": "U+591C | run 10/10 | sample 1742/1839"
+    },
+    {
+      "file": "000459.jpg",
+      "seconds": 157.44909655698575,
+      "label": "U+591C | run 10/10 | sample 1760/1839"
+    },
+    {
+      "file": "000460.jpg",
+      "seconds": 157.69534196995664,
+      "label": "U+591C | run 10/10 | sample 1778/1839"
+    },
+    {
+      "file": "000461.jpg",
+      "seconds": 158.11598426196724,
+      "label": "U+591C | run 10/10 | sample 1814/1839"
+    },
+    {
+      "file": "000462.jpg",
+      "seconds": 158.4309261039598,
+      "label": "U+591C | run 10/10 | sample 1832/1839"
+    },
+    {
+      "file": "000463.jpg",
+      "seconds": 158.74146258900873,
+      "label": "U+591C | run 10/10 | sample 1839/1839"
+    },
+    {
+      "file": "000464.jpg",
+      "seconds": 158.98849345894996,
+      "label": "U+591C | run 10/10 | sample 1839/1839"
+    },
+    {
+      "file": "000465.jpg",
+      "seconds": 159.32980306399986,
+      "label": "U+591C | run 10/10 | sample 1839/1839"
+    },
+    {
+      "file": "000466.jpg",
+      "seconds": 159.67701329302508,
+      "label": "U+591C | run 10/10 | sample 1839/1839"
+    },
+    {
+      "file": "000467.jpg",
+      "seconds": 159.98383871791884,
+      "label": "U+591C | run 10/10 | sample 1839/1839"
+    },
+    {
+      "file": "000468.jpg",
+      "seconds": 160.2956495329272,
+      "label": "U+591C | run 10/10 | sample 1839/1839"
+    },
+    {
+      "file": "000469.jpg",
+      "seconds": 160.54693855601363,
+      "label": "U+591C | run 10/10 | sample 1839/1839"
+    }
+  ]
+}

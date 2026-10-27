@@ -1,0 +1,22 @@
+{
+  "char": "夜",
+  "codepoint": "U+591C",
+  "xml_id": "kvg:kanji_0591c",
+  "strokes": 8,
+  "samples": 2439,
+  "contact_samples": 804,
+  "max_ik_error_m": 1.2519963412783814e-06,
+  "max_tool_axis_error": 5.302199183790486e-06,
+  "travel_contact_samples": 0,
+  "force_range_n": [
+    0.018542913402488325,
+    2.22257811121179
+  ],
+  "radius_range_m": [
+    0.002750172856964166,
+    0.008245761693455414
+  ],
+  "ink_pixels": 75186,
+  "canvas_sha256": "e48cec224099bbbd306f53b955f0ddb84b3f3be502c6fc23cd375c5d32169361",
+  "trace_sha256": "ea7fc78b80384e020f641282338572cc0d0995b24d05862b7dacf3df72b092cd"
+}

@@ -1,0 +1,22 @@
+{
+  "char": "永",
+  "codepoint": "U+6C38",
+  "xml_id": "kvg:kanji_06c38",
+  "strokes": 5,
+  "samples": 1790,
+  "contact_samples": 547,
+  "max_ik_error_m": 1.2011044768981736e-06,
+  "max_tool_axis_error": 4.973836291765522e-06,
+  "travel_contact_samples": 0,
+  "force_range_n": [
+    0.01854324606015587,
+    2.2225136972417068
+  ],
+  "radius_range_m": [
+    0.0027501796753228213,
+    0.008245686969294534
+  ],
+  "ink_pixels": 62379,
+  "canvas_sha256": "d743ed09241c4525a45378a4cc935a4d1a9ab5f729f95163059b3b4c666ae539",
+  "trace_sha256": "59f96a0f0d7eb3417a4609d04d0ac65c1b4a58ec57391c6c0cbb90192bb35fdb"
+}

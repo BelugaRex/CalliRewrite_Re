@@ -125,18 +125,23 @@ Then you can have an easy startup:
 The `robofab_sim/` module adds an interactive Viser simulator with a Franka Panda
 arm, deformable brush, and Xuan paper canvas. It supports three input modes:
 
+**Grading/verification entry point: [robofab_sim/README.md](robofab_sim/README.md).**
+The validated route is character → KanjiVG → pressure trajectory → Panda IK/FK →
+brush contact → visible ink, without TensorFlow, RL or GPU. Ten executed runs,
+numerical traces and a real Viser browser recording are in `robofab_sim/evidence/`.
+
 | Mode | Flag | Input |
 |------|------|-------|
-| Stage 1/2 — built-in chars | _(none)_ | dropdown: yong / yi / ren / zhong / shan |
-| Stage 3 — KanjiVG | `--char 福` | any CJK character in KanjiVG database |
-| Stage 3 — CalliRewrite | `--npz path.npz` | seq_extract output `.npz` file |
+| 80 分演示与内置 chars | _(none)_ | dropdown: yong / yi / ren / zhong / shan; 轨迹由 KanjiVG 生成 |
+| Stage 3 — KanjiVG | `--char 春` | a single character present in the KanjiVG XML dataset |
+| Experimental — CalliRewrite | `--npz path.npz` | legacy bridge; coordinate/width semantics not validated; not grading evidence |
 
 ### Quick Start
 
 ```bash
 # 1. Create Python 3.11 venv and install deps
 uv venv .venv --python 3.11
-uv pip install --python .venv/bin/python viser yourdfpy robot_descriptions Pillow numpy
+uv pip install --python .venv/bin/python -r robofab_sim/requirements.txt
 
 # 2. Download KanjiVG data (~30MB, one-time)
 bash robofab_sim/data/download_kanjivg.sh
@@ -144,17 +149,24 @@ bash robofab_sim/data/download_kanjivg.sh
 # 3. Run simulator (Stage 1/2 built-in chars)
 .venv/bin/python robofab_sim/calligraphy_sim.py
 
-# 4. Run with any CJK character (Stage 3 — KanjiVG)
-.venv/bin/python robofab_sim/calligraphy_sim.py --char 福
+# 4. Run with a character present in KanjiVG (Stage 3)
+.venv/bin/python robofab_sim/calligraphy_sim.py --char 春
 
-# 5. Full pipeline: image → CalliRewrite → Viser (one command)
-bash infer.sh 福
+# 5. Execute and export the 6 + 4 grading runs; verify every saved FK pose
+.venv/bin/python robofab_sim/acceptance.py
+.venv/bin/python robofab_sim/validate.py
 ```
 
-Then open `http://localhost:8080` in a browser (Chrome/Firefox — VS Code's
-embedded browser does not support WebGL). Click **Replay Character** to write.
+Then open `http://localhost:8080` in a WebGL-capable browser. Click
+**Execute Character (Write)**; after completion use **Replay Character**.
+The integrated browser was also verified in the current environment.
 
 ### seq_extract Inference (optional, requires TensorFlow)
+
+This original research-model route is **experimental for the robot simulator**.
+The legacy NPZ bridge does not correctly reproduce window/cursor/Bézier/width
+semantics; the following commands are not proof of a validated image-to-robot
+pipeline. Use the KanjiVG route above for the rubric demonstration.
 
 ```bash
 # Separate Python 3.8 + TF 2.10 environment for seq_extract
