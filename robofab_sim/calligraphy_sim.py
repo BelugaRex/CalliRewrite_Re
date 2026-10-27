@@ -325,8 +325,8 @@ class XuanPaperCanvas:
         - world_y (left/right)   -> maps monotonically along the lateral axis (Left -> Right).
         """
         rx = (world_x - (self.ox - self.pw / 2.0)) / self.pw
-        # Fixed lateral mapping: as world_y moves from -Y to +Y (left to right), ry increases from 0 to 1!
-        ry = (world_y - (self.oy - self.ph / 2.0)) / self.ph
+        # Viser wxyz=(0,1,0,0) flips image rows to world -Y; invert so ink follows the 3D tip.
+        ry = 1.0 - (world_y - (self.oy - self.ph / 2.0)) / self.ph
 
         if not (0 <= rx < 1 and 0 <= ry < 1) or radius <= 0 or normal_force <= 0:
             return
