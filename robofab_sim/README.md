@@ -1,5 +1,7 @@
 # RoboFab：评分验收入口
 
+> **草稿评审状态：下面的交付与证据描述包含历史实验，并非当前分支已完成验收。** 当前源码与证据中的两个源码哈希不匹配；方向、窄纸笔触和多字布局仍有已知问题。请先阅读 [`docs/LOCAL_WORK_REVIEW.md`](../docs/LOCAL_WORK_REVIEW.md) 和 [`diagnostics/README.md`](diagnostics/README.md)。单元测试不能替代真实浏览器方向检查，不要直接合并此草稿。
+
 ## 当前交付与边界
 
 主线是**输入单个汉字 → KanjiVG 有序笔画 → 自动采样与笔压 → Panda IK/FK → 笔刷接触 → 宣纸墨迹**。
