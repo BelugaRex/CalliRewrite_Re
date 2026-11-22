@@ -110,7 +110,8 @@ def main():
         tuft = brush.compute_deformation(tip-.045*rot[:, 2], tip, rot, np.zeros(3))
         for x in np.linspace(.47, .63, 300):
             paper.deposit_ink(x, .025, tuft["footprint_radius"], tuft["normal_force"])
-        gray = float(np.array(paper.image)[int((.025+.18)/.36*320), 160].mean())
+        row = paper.world_to_pixel(.55, .025)[1]
+        gray = float(np.array(paper.image)[row, 160].mean())
         levels.append(dict(pressure=p, depth_m=.002-tip[2], diameter_mm=tuft["footprint_radius"]*2000, center_rgb_mean=gray))
         calibration.paste(paper.image, (320*i, 0))
         ImageDraw.Draw(calibration).text((320*i+10, 330), f"p={p} | width={levels[-1]['diameter_mm']:.1f}mm | gray={gray:.0f}", fill="black")

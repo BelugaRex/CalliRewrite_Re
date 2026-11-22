@@ -4,11 +4,11 @@
   "source": "KanjiVG, CC BY-SA 3.0, https://kanjivg.tagaini.net/",
   "xml_sha256": "293dc9741cf6b6cb47aabb6235dca05da0ae4210590e139b5b1aebe37ddf72a4",
   "source_sha256": {
-    "calligraphy_sim.py": "c11670e3f459f119721f1a9c6de3232edc41b391e649469f07d1f59c2c0fbfe3",
+    "calligraphy_sim.py": "c313c188c0b480ddce199ae702be91c846a9350e05dda9b1a857ece783753f09",
     "kanjivg_to_trajectory.py": "11159b5760c95574e16b16f1ef09d9e8a9510ef9386aac8addb00df01966382f",
-    "execution.py": "0b765b5a8e5c47cc6513181215ff1a9efee4d93d9dd0b2f854c4b26d6afd5133",
+    "execution.py": "8ed67730f6e4ce423633418449b4e0207cfbd58353a6c97da45f06dda1c5935b",
     "deformable_brush_physics.py": "ab4baf8a9946f24c63fb1c495bc7b44a4e60aa782b9f8f6d412f34fb8886f1b8",
-    "acceptance.py": "a1f7b30d3049b30c878c6c4cd58c99f48cba3b12c3fe96e9c3aa3e0cc4b580f1"
+    "acceptance.py": "1cbef9e7a53530807cf52b1007539159a43a1a55728163bb7c93d7f569739ddf"
   },
   "units": "metres, radians, heuristic newtons",
   "runs": [
@@ -32,7 +32,7 @@
         0.008245686969294534
       ],
       "ink_pixels": 62379,
-      "canvas_sha256": "d743ed09241c4525a45378a4cc935a4d1a9ab5f729f95163059b3b4c666ae539",
+      "canvas_sha256": "160c4e2252d12f8ff254113b90d4b631e7ff37acea12c72099880e3ba4004482",
       "trace_sha256": "59f96a0f0d7eb3417a4609d04d0ac65c1b4a58ec57391c6c0cbb90192bb35fdb"
     },
     {
@@ -55,7 +55,7 @@
         0.008245686969294534
       ],
       "ink_pixels": 62379,
-      "canvas_sha256": "d743ed09241c4525a45378a4cc935a4d1a9ab5f729f95163059b3b4c666ae539",
+      "canvas_sha256": "160c4e2252d12f8ff254113b90d4b631e7ff37acea12c72099880e3ba4004482",
       "trace_sha256": "59f96a0f0d7eb3417a4609d04d0ac65c1b4a58ec57391c6c0cbb90192bb35fdb"
     },
     {
@@ -78,7 +78,7 @@
         0.0075809122716518195
       ],
       "ink_pixels": 19119,
-      "canvas_sha256": "ae79dc891b91bb75d84450ec3b1ce1f25eb86420a929b40d24c714470204a8d6",
+      "canvas_sha256": "c48b8ce7fb1ebfd6f7432439766454e34f23bae9318f4799de34ed26b313451b",
       "trace_sha256": "51256aea4cc8b0ca4daa9c630899004910870ca48150a242c1397128ae3675d8"
     },
     {
@@ -101,7 +101,7 @@
         0.0075809122716518195
       ],
       "ink_pixels": 19119,
-      "canvas_sha256": "ae79dc891b91bb75d84450ec3b1ce1f25eb86420a929b40d24c714470204a8d6",
+      "canvas_sha256": "c48b8ce7fb1ebfd6f7432439766454e34f23bae9318f4799de34ed26b313451b",
       "trace_sha256": "51256aea4cc8b0ca4daa9c630899004910870ca48150a242c1397128ae3675d8"
     },
     {
@@ -124,7 +124,7 @@
         0.008245713589948668
       ],
       "ink_pixels": 30425,
-      "canvas_sha256": "d420b4d973b925f382b2a03b74cfb708f52451ee29af8245eae00f7a53f1bf92",
+      "canvas_sha256": "6ac9c0ef2165ac85400d56eafb5eb7e1b095a87852dc2cea3e4c0caff5704176",
       "trace_sha256": "50cdd50a726244112590a4135334eed4cf6879b0a59b52d4db08feef57a5ac34"
     },
     {
@@ -147,7 +147,7 @@
         0.008245713589948668
       ],
       "ink_pixels": 30425,
-      "canvas_sha256": "d420b4d973b925f382b2a03b74cfb708f52451ee29af8245eae00f7a53f1bf92",
+      "canvas_sha256": "6ac9c0ef2165ac85400d56eafb5eb7e1b095a87852dc2cea3e4c0caff5704176",
       "trace_sha256": "50cdd50a726244112590a4135334eed4cf6879b0a59b52d4db08feef57a5ac34"
     },
     {
@@ -170,7 +170,7 @@
         0.0082457987282612
       ],
       "ink_pixels": 87029,
-      "canvas_sha256": "663f6824664fca26d4f996b90a25b17e2a3559da71f414cdadf98164837d7c2c",
+      "canvas_sha256": "49ee6951d9ba4c49286d2a3b0bedbaed0b5d533aa1a2c234e39da6ce5e4a4572",
       "trace_sha256": "846dcba091ad0388832be7cda26bfd6d872c99e697eebee3c4b33ea22799d2d0"
     },
     {
@@ -193,7 +193,7 @@
         0.007580915022612366
       ],
       "ink_pixels": 53141,
-      "canvas_sha256": "2001a7e61d7935e07fccd975a93ad8b7960c8a9cb52d3a577202dbd1b552f83d",
+      "canvas_sha256": "18887a17fe0516437b96953f13b3a1f83d04578b9c8af931ba703b7fb7e6913a",
       "trace_sha256": "0235f2b63afc4fbf9b34f70589a107a0db5e782be46e6c5f462154a641d8b08e"
     },
     {
@@ -216,7 +216,7 @@
         0.0070914537898481705
       ],
       "ink_pixels": 56807,
-      "canvas_sha256": "9f882b658427dc3721d9c8243d8a5d851cb75a43682791cbe427db5a75884116",
+      "canvas_sha256": "d60c36aef360264236826d0bda84a50aa94461183fb51267c987762207f60f74",
       "trace_sha256": "5b22d5e7b3f12499dd92c2e2b54694b1cb08f553832c5bf11ee613ed8b6093cd"
     },
     {
@@ -239,7 +239,7 @@
         0.008245761693455414
       ],
       "ink_pixels": 75186,
-      "canvas_sha256": "e48cec224099bbbd306f53b955f0ddb84b3f3be502c6fc23cd375c5d32169361",
+      "canvas_sha256": "507f473f82ddbdc28d79614d9aa053ff74c322a815b116c0ef3a4f137569a1f8",
       "trace_sha256": "ea7fc78b80384e020f641282338572cc0d0995b24d05862b7dacf3df72b092cd"
     }
   ]

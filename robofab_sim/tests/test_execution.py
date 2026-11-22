@@ -48,7 +48,8 @@ class TrajectoryTests(unittest.TestCase):
             tuft = brush.compute_deformation(tip-.045*rot[:, 2], tip, rot, np.zeros(3))
             paper.deposit_ink(*tip[:2], tuft["footprint_radius"], tuft["normal_force"])
             radii.append(tuft["footprint_radius"])
-            pixel = np.array(paper.image)[int((.025+.18)/.36*1024), 512].mean()
+            row = paper.world_to_pixel(.55, .025)[1]
+            pixel = np.array(paper.image)[row, 512].mean()
             gray.append(pixel)
             before = np.array(paper.image)
             paper.deposit_ink(*tip[:2], tuft["footprint_radius"], tuft["normal_force"])
@@ -57,6 +58,14 @@ class TrajectoryTests(unittest.TestCase):
             np.testing.assert_array_equal(np.array(paper.image), before)
         self.assertTrue(np.all(np.diff(radii) > 0))
         self.assertTrue(np.all(np.diff(gray) < -10), gray)
+
+    def test_world_to_viser_image_rows(self):
+        paper = XuanPaperCanvas(resolution=100)
+        top = paper.world_to_pixel(.55, -.05)
+        bottom = paper.world_to_pixel(.55, .05)
+        self.assertGreater(top[1], bottom[1])
+        self.assertEqual(paper.world_to_pixel(.55, .18)[1], 0)
+        self.assertIsNone(paper.world_to_pixel(.55, -.18))
 
     def test_safe_transitions(self):
         k = PandaKinematics()
@@ -77,7 +86,8 @@ class TrajectoryTests(unittest.TestCase):
             paper = XuanPaperCanvas()
             run = Execution(k, RealisticDeformableTuft(), paper, self.parser.get_trajectory("一"))
             while not run.done:
-                run.step()
+                tuft = run.step()
+                self.assertIs(run.last_tuft, tuft)
             outputs.append(np.array(paper.image))
             self.assertIsNone(run.step())
             self.assertLess(max(row["residual_m"] for row in run.trace), .0005)

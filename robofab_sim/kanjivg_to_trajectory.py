@@ -181,13 +181,14 @@ def _parse_svg_path(d: str, n_interp: int = 8) -> list[tuple[float, float]]:
 # Coordinate transform: SVG units → robot world frame
 # ---------------------------------------------------------------------------
 
-def _svg_to_world(sx: float, sy: float) -> tuple[float, float]:
-    """Map KanjiVG SVG (0–109) to robot world (x, y) in metres."""
-    # Normalise to [0, 1] then centre on paper
+def _svg_to_world(sx: float, sy: float, scale: float = 1.0,
+                  x_offset: float = 0.0, y_offset: float = 0.0) -> tuple[float, float]:
+    """Map KanjiVG SVG (0–109) to robot world (x, y) in metres.
+    scale shrinks the character bounding box; offsets shift in metres."""
     nx = sx / SVG_SIZE
     ny = sy / SVG_SIZE
-    wx = PAPER_X_CENTER + PAPER_HALF * (2.0 * nx - 1.0)   # left→right
-    wy = PAPER_Y_CENTER + PAPER_HALF * (2.0 * ny - 1.0)   # top→bottom
+    wx = PAPER_X_CENTER + PAPER_HALF * scale * (2.0 * nx - 1.0) + x_offset
+    wy = PAPER_Y_CENTER + PAPER_HALF * scale * (2.0 * ny - 1.0) + y_offset
     return round(wx, 4), round(wy, 4)
 
 
@@ -246,12 +247,15 @@ class KanjiVGParser:
         return results
 
     def get_trajectory(self, char: str, n_interp: int = 6,
+                       x_offset: float = 0.0, y_offset: float = 0.0,
+                       scale: float = 1.0,
                        ) -> list[list[tuple[float, float, float, float]]]:
         """
         Return trajectory for *char* as a list of strokes.
         Each stroke = list of (world_x, world_y, z, pressure) waypoints.
         The first and last waypoint of every stroke have z=Z_SAFE, pressure=0
         (pen-up approach / lift-off).
+        x_offset/y_offset shift the character in metres; scale shrinks it.
         """
         kanji = self._find_kanji(char)
         if kanji is None:
@@ -265,22 +269,22 @@ class KanjiVGParser:
             if len(svg_pts) < 2:
                 continue
 
-            # Pick pressure profile from stroke type (use first classifier token)
             type_key = stype.split("/")[0] if stype else ""
             profile = _STROKE_PRESSURE.get(type_key, _DEFAULT_PRESSURE)
 
             stroke: list[tuple] = []
-            # Pen-down approach at first contact point
-            wx0, wy0 = _svg_to_world(*svg_pts[0])
-            stroke.append((wx0, wy0, Z_SAFE, 0.0))   # approach
+            wx0, wy0 = _svg_to_world(*svg_pts[0], scale=scale,
+                                     x_offset=x_offset, y_offset=y_offset)
+            stroke.append((wx0, wy0, Z_SAFE, 0.0))
 
             for k, (sx, sy) in enumerate(svg_pts):
-                wx, wy = _svg_to_world(sx, sy)
+                wx, wy = _svg_to_world(sx, sy, scale=scale,
+                                       x_offset=x_offset, y_offset=y_offset)
                 z, p = _pressure_z(k, len(svg_pts), profile)
                 stroke.append((wx, wy, z, p))
 
-            # Pen-up lift-off at last point
-            wx_last, wy_last = _svg_to_world(*svg_pts[-1])
+            wx_last, wy_last = _svg_to_world(*svg_pts[-1], scale=scale,
+                                              x_offset=x_offset, y_offset=y_offset)
             stroke.append((wx_last, wy_last, Z_SAFE, 0.0))
 
             trajectory.append(stroke)

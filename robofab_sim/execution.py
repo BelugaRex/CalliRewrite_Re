@@ -61,6 +61,7 @@ class Execution:
         self.index = 0
         self.previous_ink = None
         self.trace = []
+        self.last_tuft = None
 
     @property
     def done(self):
@@ -77,6 +78,7 @@ class Execution:
             raise RuntimeError(f"IK failed at sample {self.index}: {residual:.6f} m")
         tuft = self.brush.compute_deformation(hand+.180*rotation[:, 2], tip, rotation,
                                              (tip-self.last_tip) * 60)
+        self.last_tuft = tuft
         # No ink in approach/travel even if a malformed physical pose contacts.
         deposit = sample.phase not in ("travel",) and sample.stroke >= 0 and tuft["is_contact"]
         if deposit:

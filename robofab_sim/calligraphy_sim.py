@@ -318,20 +318,25 @@ class XuanPaperCanvas:
         self.draw.line([(pad, pad), (w - pad, h - pad)], fill=grid_color, width=1)
         self.draw.line([(w - pad, pad), (pad, h - pad)], fill=grid_color, width=1)
 
+    def world_to_pixel(self, world_x: float, world_y: float) -> tuple[int, int] | None:
+        # three.js PlaneGeometry maps texture U=0 to local +X/2 (right), U=1 to -X/2 (left),
+        # so image col increases toward world -X. Invert rx to correct.
+        rx = 1.0 - (world_x - (self.ox - self.pw / 2.0)) / self.pw
+        ry = 1.0 - (world_y - (self.oy - self.ph / 2.0)) / self.ph
+        if not (0 <= rx < 1 and 0 <= ry < 1):
+            return None
+        return int(rx * self.res), int(ry * self.res)
+
     def deposit_ink(self, world_x: float, world_y: float, radius: float, normal_force: float, bleed_factor=0.7):
         """
         Maps 3D world coordinates onto the 2D Xuan paper canvas.
         - world_x (forward/back) -> maps monotonically along the forward axis.
         - world_y (left/right)   -> maps monotonically along the lateral axis (Left -> Right).
         """
-        rx = (world_x - (self.ox - self.pw / 2.0)) / self.pw
-        # Viser wxyz=(0,1,0,0) flips image rows to world -Y; invert so ink follows the 3D tip.
-        ry = 1.0 - (world_y - (self.oy - self.ph / 2.0)) / self.ph
-
-        if not (0 <= rx < 1 and 0 <= ry < 1) or radius <= 0 or normal_force <= 0:
+        pixel = self.world_to_pixel(world_x, world_y)
+        if pixel is None or radius <= 0 or normal_force <= 0:
             return
-        px = int(rx * self.res)
-        py = int(ry * self.res)
+        px, py = pixel
         pr = max(2, int((radius / self.pw) * self.res))
         # Maximum local optical coverage, rather than frame-count accumulation:
         # stationary pauses and different GUI frame rates cannot saturate the ink.
@@ -487,43 +492,44 @@ def main(extra_char: str | None = None, npz_path: str | None = None, port=8080, 
 
     # 1. Start Viser Server
     server = viser.ViserServer(port=port)
-    server.initial_camera.position = (1.4, -0.9, 1.1)
-    server.initial_camera.look_at = (0.55, 0.0, 0.2)
+    # Camera in front of paper (Y- side), centred on paper X — prevents mirrored appearance
+    server.initial_camera.position = (0.55, -1.2, 0.8)
+    server.initial_camera.look_at = (0.55, 0.0, 0.05)
     server.initial_camera.up = (0.0, 0.0, 1.0)
 
     # 2. Add Studio Environment (Calligraphy Table, Xuan Paper, Scholar's Items)
     server.scene.add_grid("/ground", width=3.0, height=3.0, position=(0.0, 0.0, -0.4))
 
-    # Rosewood Calligraphy Table (Top at Z = 0.0)
+    # Rosewood Calligraphy Table
     server.scene.add_box(
         "/studio/table",
         color=(45, 30, 22),
-        dimensions=(0.60, 0.80, 0.04),
+        dimensions=(0.60, 0.40, 0.04),
         position=(0.55, 0.0, -0.02),
     )
 
-    # Xuan Paper Canvas (Surface at Z = 0.002)
-    paper = XuanPaperCanvas(resolution=1024, physical_width=0.36, physical_height=0.36, origin_xy=(0.55, 0.0))
+    # Xuan Paper Canvas — horizontal scroll: wide in x (reach), narrow in y
+    paper = XuanPaperCanvas(resolution=1024, physical_width=0.36, physical_height=0.14, origin_xy=(0.55, 0.0))
     paper_handle = server.scene.add_image(
         "/studio/xuan_paper",
         image=np.array(paper.image.convert("RGB")),
         render_width=paper.pw,
         render_height=paper.ph,
         position=(paper.ox, paper.oy, 0.002),
-        wxyz=(0.0, 1.0, 0.0, 0.0),  # image rows increase along world +Y
+        wxyz=(0.0, 1.0, 0.0, 0.0),
     )
 
     # Brass Paperweights
     server.scene.add_box(
         "/studio/paperweight_left",
         color=(185, 145, 60),
-        dimensions=(0.025, 0.30, 0.012),
+        dimensions=(0.025, 0.14, 0.012),
         position=(0.35, 0.0, 0.008),
     )
     server.scene.add_box(
         "/studio/paperweight_right",
         color=(185, 145, 60),
-        dimensions=(0.025, 0.30, 0.012),
+        dimensions=(0.025, 0.14, 0.012),
         position=(0.75, 0.0, 0.008),
     )
 
@@ -624,6 +630,7 @@ def main(extra_char: str | None = None, npz_path: str | None = None, port=8080, 
         btn_play = server.gui.add_button("Execute Character (Write)")
         btn_step = server.gui.add_button("Step Stroke")
         btn_reset = server.gui.add_button("Reset Arm Pose")
+        btn_replay_all = server.gui.add_button("Replay All (重播全部)" if demo else "Replay All")
         slider_speed = server.gui.add_slider("Writing Speed", min=0.2, max=3.0, step=0.1, initial_value=1.0)
         chk_loop = server.gui.add_checkbox("Loop Playback", False)
 
@@ -675,10 +682,49 @@ def main(extra_char: str | None = None, npz_path: str | None = None, port=8080, 
     demo_index, demo_ready_at = 0, time.monotonic()
     capture, next_capture_at = None, 0.0
 
-    def begin():
-        paper.clear()
+    # Grid layout for demo: characters spaced along X (reach axis), centred on Y=0.
+    # X range [0.38, 0.72] = 0.34m is fully reachable; each char gets an equal slot.
+    _IK_X_MIN, _IK_X_MAX = 0.38, 0.72
+    _demo_chars = list(demo) if demo else []
+    _n_demo = len(_demo_chars)
+    _demo_slot = (_IK_X_MAX - _IK_X_MIN) / max(1, _n_demo)
+    # Scale so char half-width (0.075*scale) fills 80% of the slot.
+    _demo_scale = min(0.85, _demo_slot / (0.075 * 2) * 0.80)
+    _demo_scale = max(0.25, _demo_scale)
+
+    def _demo_offsets(idx: int) -> tuple[float, float]:
+        """Return (x_offset, y_offset=0) spaced along the robot reach axis.
+        idx=0 → smallest x (near, left on canvas) → first char appears leftmost."""
+        if _n_demo <= 1:
+            return 0.0, 0.0
+        x_center = _IK_X_MIN + _demo_slot * (idx + 0.5)
+        x_off = round(x_center - 0.55, 4)
+        return x_off, 0.0
+
+    def _get_demo_trajectory(char: str, idx: int):
+        """Build trajectory with per-slot grid offset when running in demo mode."""
+        x_off, y_off = _demo_offsets(idx)
+        if _kvg_parser is not None and _kvg_parser.available(char):
+            return _kvg_parser.get_trajectory(char, x_offset=x_off, y_offset=y_off,
+                                              scale=_demo_scale)
+        # Fall back to stored trajectory shifted by offset (built-in hand-crafted waypoints)
+        base = CALLIGRAPHY_TRAJECTORIES[char]
+        if x_off == 0.0 and y_off == 0.0:
+            return base
+        return [[(wx + x_off, wy + y_off, z, p) for wx, wy, z, p in stroke]
+                for stroke in base]
+
+    def begin(demo_slot: int | None = None):
+        char = char_selector.value
+        if demo_slot is None:
+            # Interactive mode: single character, always clear paper first
+            paper.clear()
+            strokes = CALLIGRAPHY_TRAJECTORIES[char]
+        else:
+            # Demo mode: keep previous chars on paper, place new char in its slot
+            strokes = _get_demo_trajectory(char, demo_slot)
         play_state["execution"] = Execution(kinematics, brush_tuft, paper,
-                                            CALLIGRAPHY_TRAJECTORIES[char_selector.value], current_q)
+                                            strokes, current_q)
         play_state["running"] = True
         play_state["last_tip"] = kinematics.forward_kinematics(current_q)[2]
 
@@ -711,6 +757,19 @@ def main(extra_char: str | None = None, npz_path: str | None = None, port=8080, 
         play_state["step"] = True
         play_state["running"] = True
         btn_play.label = "Pause Writing"
+
+    @btn_replay_all.on_click
+    def _(_):
+        nonlocal demo_index, demo_ready_at
+        if not demo:
+            return
+        play_state["running"] = False
+        play_state["execution"] = None
+        paper.clear()
+        paper_handle.image = np.array(paper.image.convert("RGB"))
+        demo_index = 0
+        demo_ready_at = time.monotonic() + 0.5
+        btn_play.label = "Execute Character (Write)"
 
     @btn_reset.on_click
     def _(_):
@@ -778,7 +837,7 @@ def main(extra_char: str | None = None, npz_path: str | None = None, port=8080, 
         if demo and not play_state["running"] and time.monotonic() >= demo_ready_at and server.get_clients():
             if demo_index < len(demo):
                 char_selector.value = demo[demo_index]
-                begin()
+                begin(demo_slot=demo_index)
                 demo_index += 1
             elif record_dir:
                 capture.finish()
@@ -802,7 +861,7 @@ def main(extra_char: str | None = None, npz_path: str | None = None, port=8080, 
                         break
             current_q = execution.q.copy()
             phase = execution.samples[max(0, execution.index-1)]
-            state = "Complete" if execution.done else ("Writing" if play_state["running"] else "Paused")
+            state = "Complete · brush lifted 23 mm" if execution.done else ("Writing" if play_state["running"] else "Paused")
             status.content = f"**{char_selector.value}** · sample {execution.index}/{len(execution.samples)} · stroke {phase.stroke+1} · {state}"
             if execution.done:
                 play_state["running"] = False
@@ -838,7 +897,10 @@ def main(extra_char: str | None = None, npz_path: str | None = None, port=8080, 
         velocity = (nominal_tip_p - play_state["last_tip"]) / max(1e-4, dt)
         play_state["last_tip"] = nominal_tip_p.copy()
 
-        tuft_data = brush_tuft.compute_deformation(tuft_root_p, nominal_tip_p, hand_r, velocity)
+        execution = play_state["execution"]
+        tuft_data = execution.last_tuft if execution is not None else None
+        if tuft_data is None:
+            tuft_data = brush_tuft.compute_deformation(tuft_root_p, nominal_tip_p, hand_r, velocity)
 
         # Update 3D tuft core mesh and fine bristle fibers
         server.scene.add_mesh_simple(
